@@ -13,8 +13,8 @@ const games: Game[] = [
   {
     name: "Geometry Dash Spam Test",
     description: "Test your spamming skills in this exciting Geometry Dash challenge!",
-    image: "https://source.unsplash.com/random/800x600?geometry,game",
-    url: "https://example.com/geometry-dash-spam-test",
+    image: "/src/img/geometry-dash-spam-test.png",
+    url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-spam-test.html",
   },
   {
     name: "Geometry Dash Spam Master",

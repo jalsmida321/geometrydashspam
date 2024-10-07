@@ -17,7 +17,7 @@ const GamePage: React.FC = () => {
         <iframe
           src={gameUrl}
           title={gameName}
-          className="w-full h-[calc(100vh-300px)] border-0"
+          className="w-1200 h-1000 border-0"
           allowFullScreen
         ></iframe>
       </div>

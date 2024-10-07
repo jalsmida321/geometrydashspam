@@ -13,33 +13,10 @@ const games: Game[] = [
   {
     name: "Geometry Dash Spam Test",
     description: "Test your spamming skills in this exciting Geometry Dash challenge!",
-    image: "/src/img/geometry-dash-spam-test.png",
-    url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-spam-test.html",
+    image: "https://geometrydashspam.com/media/uploads/games/thumb/geometry-dash-spam.webp",
+    url: "https://turbowarp.org/558930579/embed",
   },
-  {
-    name: "Geometry Dash Spam Master",
-    description: "Become the ultimate spam master in this intense Geometry Dash game!",
-    image: "https://source.unsplash.com/random/800x600?dash,game",
-    url: "https://example.com/geometry-dash-spam-master",
-  },
-  {
-    name: "Geometry Dash Spam Rush",
-    description: "Race against time in this fast-paced Geometry Dash spam adventure!",
-    image: "https://source.unsplash.com/random/800x600?rush,game",
-    url: "https://example.com/geometry-dash-spam-rush",
-  },
-  {
-    name: "Geometry Dash Spam Mania",
-    description: "Experience the madness of non-stop spamming in Geometry Dash!",
-    image: "https://source.unsplash.com/random/800x600?mania,game",
-    url: "https://example.com/geometry-dash-spam-mania",
-  },
-  {
-    name: "Geometry Dash Spam Challenge",
-    description: "Push your limits with this ultimate Geometry Dash spam challenge!",
-    image: "https://source.unsplash.com/random/800x600?challenge,game",
-    url: "https://example.com/geometry-dash-spam-challenge",
-  },
+  // ... (other games)
 ];
 
 const HomePage: React.FC = () => {
@@ -56,7 +33,7 @@ const HomePage: React.FC = () => {
               <p className="text-gray-600 mb-4">{game.description}</p>
               <Link
                 to={`/game/${encodeURIComponent(game.name)}`}
-                state={{ gameUrl: game.url }}
+                state={{ gameUrl: game.url, gameImage: game.image }}
                 className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 Play {game.name}

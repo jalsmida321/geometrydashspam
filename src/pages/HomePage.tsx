@@ -13,38 +13,38 @@ const games: Game[] = [
   {
     name: "Geometry Dash Spam Test",
     description: "Test your spamming skills in this exciting Geometry Dash challenge!",
-    image: "https://geometrydashspam.com/media/uploads/games/thumb/geometry-dash-spam.webp",
-    url: "https://turbowarp.org/558930579/embed",
+    image: "src\img\geometry-dash-spam-test.png",
+    url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-spam-test.html",
   },
   {
     name: "Geometry Dash Spam Challenge",
     description: "Push your limits in this intense Geometry Dash spam challenge!",
     image: "https://geometrydashspam.com/media/uploads/games/thumb/geometry-dash-spam-challenge.webp",
-    url: "https://turbowarp.org/558930580/embed",
+    url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-Spam-Challenge.html",
   },
   {
     name: "Geometry Dash Spam Master",
     description: "Become the ultimate spam master in this Geometry Dash game!",
     image: "https://geometrydashspam.com/media/uploads/games/thumb/geometry-dash-spam-master.webp",
-    url: "https://turbowarp.org/558930581/embed",
+    url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-Spam-Master.html",
   },
   {
     name: "Geometry Dash Spam Wave",
     description: "Master the wave in this challenging Geometry Dash spam game!",
     image: "https://geometrydashspam.com/media/uploads/games/thumb/geometry-dash-spam-wave.webp",
-    url: "https://turbowarp.org/558930582/embed",
+    url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-Spam-Wave.html",
   },
   {
     name: "Geometry Dash Spam Challenge Chall",
     description: "Take on the ultimate spam challenge in this Geometry Dash game!",
     image: "https://geometrydashspam.com/media/uploads/games/thumb/geometry-dash-spam-challenge-chall.webp",
-    url: "https://turbowarp.org/558930583/embed",
+    url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-spam-chall.html",
   },
   {
     name: "AKA Geometry Dash Spam",
     description: "Experience a unique twist on Geometry Dash spam gameplay!",
     image: "https://geometrydashspam.com/media/uploads/games/thumb/aka-geometry-dash-spam.webp",
-    url: "https://turbowarp.org/558930584/embed",
+    url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/The-Great-Escape-AKA-Geometry-Spam.html",
   },
 ];
 

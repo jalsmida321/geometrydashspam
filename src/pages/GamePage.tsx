@@ -13,13 +13,9 @@ const GamePage: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto">
       <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">{decodeURIComponent(gameName || '')}</h1>
-      <div className="aspect-w-16 aspect-h-9">
-        <iframe
-          src={gameUrl}
-          title={gameName}
-          className="w-1200 h-1000 border-0"
-          allowFullScreen
-        ></iframe>
+      <div id="game" class="ratio ratio-16x9 overflow-hidden rounded-3 mb-4 game-ratio" style="display:none;">
+   <iframe id="ubgs" class="game-iframe lazyload" src="about:blank"  src={gameUrl}
+          title={gameName} width="850" height="590" scrolling="none" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   );

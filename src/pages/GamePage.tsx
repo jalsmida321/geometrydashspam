@@ -13,7 +13,7 @@ const GamePage: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto">
       <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">{decodeURIComponent(gameName || '')}</h1>
-      <div className="ratio ratio-16x9 overflow-hidden rounded-3 mb-4 game-ratio">
+      <div className="w-full h-full">
         <iframe
           src={gameUrl}
           title={gameName}

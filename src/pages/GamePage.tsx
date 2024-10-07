@@ -34,8 +34,7 @@ const GamePage: React.FC = () => {
           className={`aspect-w-16 aspect-h-9 overflow-hidden rounded-lg mb-4 ${isGameVisible ? '' : 'hidden'}`}
         >
           <iframe 
-            id="ubgs" 
-            className="w-full h-full"
+            className="w-850 h-590"
             src={isGameVisible ? gameUrl : 'about:blank'}
             scrolling="no" 
             frameBorder="0" 

@@ -39,6 +39,7 @@ const GamePage: React.FC = () => {
             scrolling="no" 
             frameBorder="0" 
             allowFullScreen
+            style={{ maxWidth: '100%', boxSizing: 'border-box' }}
           ></iframe>
         </div>
         {!isGameVisible && (

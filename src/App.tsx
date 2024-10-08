@@ -1,4 +1,9 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import GamePage from './pages/GamePage';
 import { ArrowRight, Gamepad2, TrendingUp, BookOpen, Info, BookOpen as ReadMore, Mail } from 'lucide-react';
 
 interface Game {
@@ -41,7 +46,19 @@ const games: Game[] = [
 ];
 
 function App() {
-  return (
+  return (    
+  <Router>
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      <Header />
+      <main className="flex-grow py-8 px-4 sm:px-6 lg:px-8">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/game/:gameName" element={<GamePage />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  </Router>
     <div className="flex flex-col min-h-screen bg-gray-100">
       <nav className="bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,13 +142,13 @@ function App() {
               <p className="text-gray-400">
                 Have questions or feedback? Reach out to us at:
                 <a href="mailto:contact@geometrydashspam.com" className="hover:text-white">
-                  contact@geometrydash-spam.com
+                  contact@geometrydashspam.com
                 </a>
               </p>
             </div>
           </div>
           <div className="mt-8 border-t border-gray-700 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Geometry Dash Spam. All rights reserved.</p>
+            <p>&copy; 2023 Geometry Dash Spam. All rights reserved.</p>
           </div>
         </div>
       </footer>

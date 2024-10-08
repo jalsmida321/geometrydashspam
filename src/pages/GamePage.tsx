@@ -27,28 +27,29 @@ const GamePage: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">{decodeURIComponent(gameName || '')}</h1>
-      <div className="game-container mb-12">
+      <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
+        {decodeURIComponent(gameName || '')}
+      </h1>
         <div 
-          id="game" 
-          className={`aspect-w-16 aspect-h-9 overflow-hidden rounded-lg mb-4 ${isGameVisible ? '' : 'hidden'}`}
+           id="game"
+           className={`flex justify-center mb-4 ${isGameVisible ? '' : 'hidden'}`}
         >
           <iframe 
-            className="w-850 h-590"
+             className="w-full h-[590px] max-w-[850px] rounded-lg"
             src={isGameVisible ? gameUrl : 'about:blank'}
             scrolling="no" 
             frameBorder="0" 
             allowFullScreen
-            style={{ maxWidth: '100%', boxSizing: 'border-box' }}
+            style={{ boxSizing: 'border-box' }}
           ></iframe>
         </div>
         {!isGameVisible && (
-          <div id="loader" className="aspect-w-16 aspect-h-9">
-            <div id="playGame" className="relative">
+           <div className="flex justify-center mb-4">
+            <div className="relative">
               <img 
                 src={gameImage} 
                 alt={gameName} 
-                className="w-full h-full object-cover rounded-lg"
+                 className="w-full h-[590px] max-w-[850px] object-cover rounded-lg"
               />
               <div className="play absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
                 <div className="playimg mb-4">
@@ -58,6 +59,7 @@ const GamePage: React.FC = () => {
                     className="w-48 h-48 rounded-full object-cover"
                   />
                 </div>
+                <div className="play absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 rounded-lg">
                 <button 
                   className="playBT bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-2xl transition duration-300 ease-in-out transform hover:scale-105"
                   onClick={playGame}

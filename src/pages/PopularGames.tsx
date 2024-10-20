@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 const PopularGames = () => {
   const navigate = useNavigate();
 
-const PopularGames = () => {
   const popularGames = [
     { 
       id: 1, 

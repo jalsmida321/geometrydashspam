@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import GamePage from './pages/GamePage';
+import PopularGames from './pages/PopularGames';
+import Trending from './pages/Trending';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/game/:gameName" element={<GamePage />} />
+            <Route path="/popular" element={<PopularGames />} />
+            <Route path="/trending" element={<Trending />} />
           </Routes>
         </main>
         <Footer />

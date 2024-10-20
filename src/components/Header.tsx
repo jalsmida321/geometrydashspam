@@ -11,11 +11,11 @@ const Header: React.FC = () => {
             <Link to="/" className="font-bold text-xl">Geometry Dash Spam</Link>
           </div>
           <div className="flex">
-            <Link to="/" className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700">
+            <Link to="/popular" className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700">
               <Gamepad2 className="mr-1.5 h-5 w-5" />
               Popular Games
             </Link>
-            <Link to="/" className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700">
+            <Link to="/trending" className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700">
               <TrendingUp className="mr-1.5 h-5 w-5" />
               Trending
             </Link>

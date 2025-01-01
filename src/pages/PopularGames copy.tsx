@@ -1,4 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const PopularGames = () => {
+  const navigate = useNavigate();
 
 const PopularGames = () => {
   const popularGames = [
@@ -10,6 +14,10 @@ const PopularGames = () => {
     { id: 6, title: 'Geometry Dash Vault', image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', description: 'A secret area with hidden content and rewards.' },
   ];
 
+  const handlePlayNow = (gameId) => {
+    navigate(`/game/${gameId}`);  
+  };
+
   return (
     <div>
       <h2 className="text-3xl font-bold mb-6">Popular Games</h2>
@@ -20,7 +28,10 @@ const PopularGames = () => {
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2">{game.title}</h3>
               <p className="text-gray-300">{game.description}</p>
-              <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition">
+              <button 
+                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition"
+                onClick={() => handlePlayNow(game.id)}
+              >
                 Play Now
               </button>
             </div>

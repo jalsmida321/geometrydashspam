@@ -46,11 +46,37 @@ const games: Game[] = [
     image: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/AKA-geometry-dash-spam.png",
     url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/The-Great-Escape-AKA-Geometry-Spam.html",
   },
+  {
+    name: "Geometry Dash Wave Spam",
+    description: "This is geometry dash wave spam as much as you can and try to get through the impossible level",
+    image: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-wave-spam.png",
+    url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-wave-spam.html",
+  },
 ];
 
 const HomePage: React.FC = () => {
+  // 新增结构化数据
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "GameSeries",
+    "name": "Geometry Dash Spam Challenges",
+    "description": "Discover the thrilling world of Geometry Dash Spam Challenges! Test your skills with fast-paced levels that challenge your reflexes and precision. Join a community of gamers who love creating and playing custom spam levels designed to push your limits. Share your best runs and strategies while climbing the leaderboard. Are you ready to tackle the ultimate test in Geometry Dash?",
+    "game": games.map(game => ({
+      "@type": "VideoGame",
+      "name": game.name,
+      "description": game.description,
+      "url": window.location.origin + `/game/${encodeURIComponent(game.name)}`,
+      "image": game.image
+    }))
+  };
+
   return (
+// 为了解决 JSX 元素隐式具有类型 "any" 的问题，确保项目中正确配置了 React 类型定义
+// 这里假设已经正确配置，直接使用标准的 JSX 写法
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <script type="application/ld+json">
+        {JSON.stringify(jsonLd)}
+      </script>
       <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">Geometry Dash Spam Games</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

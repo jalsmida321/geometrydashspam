@@ -79,6 +79,17 @@ const HomePage: React.FC = () => {
       </script>
       <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">Geometry Dash Spam Games</h1>
       
+      <div className="mb-12">
+      <iframe 
+        className="w-full h-[600px] max-w-[1200px] mx-auto rounded-lg shadow-xl"
+        src="https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-spam-test.html"
+        scrolling="no"
+        frameBorder="0"
+        allowFullScreen
+        loading="eager"
+      />
+    </div>
+    
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {games.map((game, index) => (
           <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden">

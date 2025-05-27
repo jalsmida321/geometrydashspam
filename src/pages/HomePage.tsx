@@ -98,7 +98,8 @@ const HomePage: React.FC = () => {
           </div>
         ))}
       </div>
-      <!-- What is Geometry Dash Spam Test -->
+
+
     <section id="what-is" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">What is Geometry Dash Spam Test?</h2>
@@ -119,7 +120,6 @@ const HomePage: React.FC = () => {
         </div>
     </section>
 
-    <!-- Benefits -->
     <section id="benefits" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">Benefits of Practicing Geometry Dash Spam Test</h2>
@@ -180,7 +180,7 @@ const HomePage: React.FC = () => {
         </div>
     </section>
 
-    <!-- How to Improve -->
+
     <section id="improve" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">How to Improve Your Geometry Dash Spam Test Performance</h2>

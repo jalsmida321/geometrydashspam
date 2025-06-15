@@ -6,6 +6,9 @@ import HomePage from './pages/HomePage';
 import GamePage from './pages/GamePage';
 import PopularGames from './pages/PopularGames';
 import Trending from './pages/Trending';
+import SpaceWaves from './pages/SpaceWaves';
+import GeometryDashUnblocked from './pages/GeometryDashUnblocked';
+import UnblockedGames from './pages/UnblockedGames';
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
             <Route path="/game/:gameName" element={<GamePage />} />
             <Route path="/popular" element={<PopularGames />} />
             <Route path="/trending" element={<Trending />} />
+            <Route path="/space-waves" element={<SpaceWaves />} />
+            <Route path="/games/geometry-dash-unblocked" element={<GeometryDashUnblocked />} />
+            <Route path="/unblocked-games" element={<UnblockedGames />} />
           </Routes>
         </main>
         <Footer />

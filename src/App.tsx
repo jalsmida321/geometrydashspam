@@ -22,9 +22,15 @@ function App() {
             <Route path="/popular" element={<PopularGames />} />
             <Route path="/trending" element={<Trending />} />
             <Route path="/space-waves" element={<SpaceWaves />} />
-            <Route path="/geometry-dash" element={<GeometryDashUnblocked />} />
-            <Route path="/unblocked-games" element={<UnblockedGames />} />
-            // 确保没有重复的路由定义
+            <Route 
+              path="/geometry-dash" 
+              element={
+                <ErrorBoundary>
+                  <GeometryDashUnblocked />
+                </ErrorBoundary>
+              } 
+            />
+            {/* 其他路由同理补充错误边界 */}
           </Routes>
         </main>
         <Footer />

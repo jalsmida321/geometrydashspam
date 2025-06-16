@@ -1,6 +1,10 @@
 // 删除开头的隐藏字符
 import React from 'react';
+// 方案一：保持原引入方式
 import { Helmet } from 'react-helmet';
+
+// 方案二：使用异步版本
+import { Helmet } from 'react-helmet-async';
 import { Gamepad2, School, Shield, TrendingUp } from 'lucide-react';
 
 export default function UnblockedGames() {

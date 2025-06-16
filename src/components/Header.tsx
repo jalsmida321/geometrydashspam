@@ -28,7 +28,7 @@ const Header: React.FC = () => {
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -53,7 +53,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -78,7 +78,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -103,7 +103,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -128,7 +128,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -153,7 +153,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -178,7 +178,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -203,7 +203,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -228,7 +228,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -253,7 +253,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -278,7 +278,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -303,7 +303,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -328,7 +328,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -353,7 +353,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -378,7 +378,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -403,7 +403,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -428,7 +428,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -453,7 +453,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -478,7 +478,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -503,7 +503,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -528,7 +528,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -553,7 +553,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -578,7 +578,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -603,7 +603,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -628,7 +628,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -653,7 +653,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -678,7 +678,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -703,7 +703,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -728,7 +728,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -753,7 +753,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -778,7 +778,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -803,7 +803,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -828,7 +828,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -853,7 +853,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -878,7 +878,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -903,7 +903,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -928,7 +928,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -953,7 +953,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -978,7 +978,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1003,7 +1003,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1028,7 +1028,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1053,7 +1053,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1078,7 +1078,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1103,7 +1103,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1128,7 +1128,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1153,7 +1153,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1178,7 +1178,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1203,7 +1203,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1228,7 +1228,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1253,7 +1253,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1278,7 +1278,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1303,7 +1303,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1328,7 +1328,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1353,7 +1353,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1378,7 +1378,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1403,7 +1403,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1428,7 +1428,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             
@@ -1453,7 +1453,7 @@ export default Header;
   Geometry Dash Unblocked
 </Link>
 <Link to="/unblocked-games" className="flex items-center gap-2 text-gray-300 hover:text-white">
-  <Shield className="w-5 h-5" />
+  <Unlock className="mr-1.5 h-5 w-5" />
   Unblocked Games
 </Link>
             

@@ -7,7 +7,7 @@ import GamePage from './pages/GamePage';
 import PopularGames from './pages/PopularGames';
 import Trending from './pages/Trending';
 import SpaceWaves from './pages/SpaceWaves';
-import GeometryDashUnblocked from './pages/GeometryDashUnblocked';
+import GeometryDashUnblocked from './pages/GeometryDashUnblocked.fixed';
 import UnblockedGames from './pages/UnblockedGames';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
             <Route path="/popular" element={<PopularGames />} />
             <Route path="/trending" element={<Trending />} />
             <Route path="/space-waves" element={<SpaceWaves />} />
-            <Route path="/games/geometry-dash-unblocked" element={<GeometryDashUnblocked />} />
+            <Route path="/geometry-dash" element={<GeometryDashUnblocked />} />
             <Route path="/unblocked-games" element={<UnblockedGames />} />
             // 确保没有重复的路由定义
           </Routes>

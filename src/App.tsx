@@ -24,7 +24,7 @@ function App() {
             <Route path="/space-waves" element={<SpaceWaves />} />
             <Route path="/games/geometry-dash-unblocked" element={<GeometryDashUnblocked />} />
             <Route path="/unblocked-games" element={<UnblockedGames />} />
-            // 确保没有重复的路由配置
+            // 确保没有重复的路由定义
           </Routes>
         </main>
         <Footer />

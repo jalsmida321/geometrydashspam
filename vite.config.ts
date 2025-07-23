@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
+    outDir: 'dist',
     sourcemap: true,
     rollupOptions: {
       output: {
@@ -15,26 +16,9 @@ export default defineConfig({
         }
       }
     }
-  }
-})
-
-export default defineConfig({
-  plugins: [react()],
-  build: {
-    rollupOptions: {
-      external: ['react-helmet'],
-      output: {
-        globals: {
-          'react-helmet': 'Helmet'
-        }
-      }
-    }
-  }
-})
-
-export default defineConfig({
-  plugins: [react()],
-  build: {
-    outDir: 'dist'
+  },
+  server: {
+    port: 3000,
+    open: true
   }
 })

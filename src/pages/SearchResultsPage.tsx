@@ -492,6 +492,7 @@ const SearchResultsPage: React.FC = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

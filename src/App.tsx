@@ -35,65 +35,65 @@ function App() {
         <Router>
           <ErrorBoundary>
             <RouteMetadataProvider>
-            <div className="flex flex-col min-h-screen bg-gray-100">
-              <Header />
-              <main className="flex-grow py-8 px-4 sm:px-6 lg:px-8">
-                <Routes>
-                {/* Primary Routes */}
-                <Route path="/" element={<HomePage />} />
-                
-                {/* Game Routes with Route Guards */}
-                <Route path="/games" element={<AllGamesPage />} />
-                <Route 
-                  path="/games/category/:categorySlug" 
-                  element={
-                    <RouteGuard type="category">
-                      <CategoryPage />
-                    </RouteGuard>
-                  } 
-                />
-                <Route 
-                  path="/game/:gameName" 
-                  element={
-                    <RouteGuard type="game">
-                      <GamePage />
-                    </RouteGuard>
-                  } 
-                />
-                
-                {/* Search Routes */}
-                <Route path="/search" element={<SearchResultsPage />} />
-                
-                {/* User Routes */}
-                <Route path="/favorites" element={<FavoritesPage />} />
-                
-                {/* Legacy Routes - Maintain backward compatibility */}
-                <Route path="/popular" element={<PopularGames />} />
-                <Route path="/trending" element={<Trending />} />
-                <Route path="/space-waves" element={<SpaceWaves />} />
-                <Route path="/geometry-dash" element={<GeometryDashUnblocked />} />
-                <Route path="/unblocked-games" element={<UnblockedGames />} />
-                
-                {/* Route Redirects for SEO compatibility */}
-                <Route 
-                  path="/category/:categorySlug" 
-                  element={<CategoryRedirect />} 
-                />
-                <Route path="/all-games" element={<Navigate to="/games" replace />} />
-                
-                {/* Explicit 404 route */}
-                <Route path="/404" element={<NotFoundPage />} />
-                
-                {/* Catch-all 404 Route */}
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
-          </RouteMetadataProvider>
-        </ErrorBoundary>
-      </Router>
-    </GameProvider>
+              <div className="flex flex-col min-h-screen bg-gray-100">
+                <Header />
+                <main className="flex-grow py-8 px-4 sm:px-6 lg:px-8">
+                  <Routes>
+                    {/* Primary Routes */}
+                    <Route path="/" element={<HomePage />} />
+
+                    {/* Game Routes with Route Guards */}
+                    <Route path="/games" element={<AllGamesPage />} />
+                    <Route
+                      path="/games/category/:categorySlug"
+                      element={
+                        <RouteGuard type="category">
+                          <CategoryPage />
+                        </RouteGuard>
+                      }
+                    />
+                    <Route
+                      path="/game/:gameName"
+                      element={
+                        <RouteGuard type="game">
+                          <GamePage />
+                        </RouteGuard>
+                      }
+                    />
+
+                    {/* Search Routes */}
+                    <Route path="/search" element={<SearchResultsPage />} />
+
+                    {/* User Routes */}
+                    <Route path="/favorites" element={<FavoritesPage />} />
+
+                    {/* Legacy Routes - Maintain backward compatibility */}
+                    <Route path="/popular" element={<PopularGames />} />
+                    <Route path="/trending" element={<Trending />} />
+                    <Route path="/space-waves" element={<SpaceWaves />} />
+                    <Route path="/geometry-dash" element={<GeometryDashUnblocked />} />
+                    <Route path="/unblocked-games" element={<UnblockedGames />} />
+
+                    {/* Route Redirects for SEO compatibility */}
+                    <Route
+                      path="/category/:categorySlug"
+                      element={<CategoryRedirect />}
+                    />
+                    <Route path="/all-games" element={<Navigate to="/games" replace />} />
+
+                    {/* Explicit 404 route */}
+                    <Route path="/404" element={<NotFoundPage />} />
+
+                    {/* Catch-all 404 Route */}
+                    <Route path="*" element={<NotFoundPage />} />
+                  </Routes>
+                </main>
+                <Footer />
+              </div>
+            </RouteMetadataProvider>
+          </ErrorBoundary>
+        </Router>
+      </GameProvider>
     </SEOProvider>
   );
 }

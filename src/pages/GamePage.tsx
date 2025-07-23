@@ -420,6 +420,7 @@ const GamePage: React.FC = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

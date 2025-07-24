@@ -65,10 +65,11 @@ function VirtualList<T>({
         
         // Set scrolling state
         setIsScrolling(true);
-        clearTimeout(scrollingTimeout);
         const scrollingTimeout = setTimeout(() => {
           setIsScrolling(false);
         }, scrollingDelay);
+        
+        return () => clearTimeout(scrollingTimeout);
       }
     }, 16), // 60fps
     [hasReachedEnd, onEndReached, endReachedThreshold, scrollingDelay]

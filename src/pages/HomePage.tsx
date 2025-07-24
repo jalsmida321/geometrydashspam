@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Grid3X3, Star, TrendingUp, Gamepad2 } from 'lucide-react';
+import { Grid3X3, Gamepad2 } from 'lucide-react';
 import { GameGrid, SearchBar, CategoryFilter } from '../components/game';
 import FeaturedGamesSection from '../components/game/FeaturedGamesSection';
 import RecentlyPlayedSection, { EmptyRecentlyPlayedSection } from '../components/game/RecentlyPlayedSection';
@@ -7,7 +7,7 @@ import { SEOHead } from '../components/SEO';
 import { useGames, useFeaturedGames } from '../hooks';
 import { useGameContext } from '../context/GameContext';
 import { useUserInteractions } from '../hooks/useUserInteractions';
-import { generateMetaDescription, extractGameKeywords } from '../utils/seoUtils';
+
 import { GameFilter } from '../types/game';
 
 const HomePage: React.FC = () => {

@@ -1,3 +1,5 @@
+import React from 'react';
+
 /**
  * Performance optimization utilities for the game site
  */

@@ -3,7 +3,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import { GameGrid } from '../components/game';
-import { VirtualList } from '../components/common';
+import VirtualList from '../components/common/VirtualList';
 import { gameService } from '../services';
 
 // Mock performance API

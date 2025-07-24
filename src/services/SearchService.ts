@@ -293,7 +293,7 @@ export class SearchService {
     });
 
     return Array.from(suggestions).slice(0, limit);
-  }
+  });
 
   /**
    * Get search suggestions for autocomplete

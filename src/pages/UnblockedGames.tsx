@@ -1,10 +1,5 @@
-// 删除开头的隐藏字符
 import React from 'react';
-// 方案一：保持原引入方式
-import { Helmet } from 'react-helmet';
-
-// 方案二：使用异步版本
-import { Helmet } from 'react-helmet-async';
+import { SEOHead } from '../components/SEO';
 import { Gamepad2, School, Shield, TrendingUp } from 'lucide-react';
 
 export default function UnblockedGames() {
@@ -26,11 +21,13 @@ export default function UnblockedGames() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <Helmet>
-        <title>Unblocked Games - School Approved Gaming Hub</title>
-        <meta name="description" content="VPN-free access to education institution certified games" />
-      </Helmet>
+    <>
+      <SEOHead
+        title="Unblocked Games - School Approved Gaming Hub"
+        description="VPN-free access to education institution certified games"
+        keywords={['unblocked games', 'school games', 'educational games', 'free games']}
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
       {/* Category sections */}
       <div className="space-y-16">
@@ -66,6 +63,7 @@ export default function UnblockedGames() {
           </section>
         ))}
       </div>
-    </div>
+      </div>
+    </>
   );
 }

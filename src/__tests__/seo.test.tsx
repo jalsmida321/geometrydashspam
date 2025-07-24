@@ -2,7 +2,6 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
-import { Helmet } from 'react-helmet';
 import HomePage from '../pages/HomePage';
 import GamePage from '../pages/GamePage';
 import CategoryPage from '../pages/CategoryPage';
@@ -43,8 +42,8 @@ window.location = { ...window.location, href: 'http://localhost:3000', origin: '
 
 describe('SEO Tests', () => {
   beforeEach(() => {
-    // Clear any existing helmet data
-    Helmet.canUseDOM = false;
+    // Clear any existing meta data
+    document.head.innerHTML = '';
   });
 
   describe('Meta Tags and Title', () => {

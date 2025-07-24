@@ -1,13 +1,15 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { SEOHead } from '../components/SEO';
 
 export default function GeometryDashUnblocked() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <Helmet>
-        <title>Geometry Dash Unblocked - Full Game Access</title>
-        <meta name="description" content="Play the full version of Geometry Dash Unblocked with all levels and features" />
-      </Helmet>
+    <>
+      <SEOHead
+        title="Geometry Dash Unblocked - Full Game Access"
+        description="Play the full version of Geometry Dash Unblocked with all levels and features. Access 21 official levels with save/load progress and custom skins support."
+        keywords={['geometry dash unblocked', 'full game', 'all levels', 'save progress', 'custom skins']}
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
       <h1 className="text-4xl font-bold mb-8 text-green-400">Geometry Dash Unblocked Edition</h1>
 
@@ -51,6 +53,7 @@ export default function GeometryDashUnblocked() {
           ))}
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -10,20 +10,163 @@
     <title>Geometry Dash Spam - Ultimate Spamming Challenges</title>
     <meta name="description" content="Explore various Geometry Dash spam challenges and test your skills in this exciting collection of spamming games. Improve your Geometry Dash techniques and become a spam master!" />
     <meta name="keywords" content="Geometry Dash, spam, challenges, games, skills, test" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-<div style="display: none;">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5EPY7GNTJD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+        .game-font { font-family: 'Orbitron', monospace; }
+        .gradient-text {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 3s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-cube text-2xl text-cyan-400"></i>
+                    <h1 class="text-2xl font-bold game-font gradient-text">Geometry Dash Spam</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-cyan-400 transition">Home</a>
+                    <a href="#games" class="hover:text-cyan-400 transition">Games</a>
+                    <a href="#about" class="hover:text-cyan-400 transition">About</a>
+                    <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700 px-4 py-2">
+            <a href="#home" class="block py-2 hover:text-cyan-400 transition">Home</a>
+            <a href="#games" class="block py-2 hover:text-cyan-400 transition">Games</a>
+            <a href="#about" class="block py-2 hover:text-cyan-400 transition">About</a>
+            <a href="#contact" class="block py-2 hover:text-cyan-400 transition">Contact</a>
+        </div>
+    </nav>
 
-  gtag('config', 'G-5EPY7GNTJD');
-</script>
-</div>
-  </body>
+    <!-- Hero Section -->
+    <section id="home" class="py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl md:text-7xl font-bold game-font mb-6 gradient-text">
+                Geometry Dash Spam
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Ultimate spamming challenges to test your skills and become a Geometry Dash master!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <div class="bg-gray-800 px-6 py-3 rounded-full">
+                    <i class="fas fa-gamepad text-cyan-400 mr-2"></i>
+                    <span>Multiple Challenges</span>
+                </div>
+                <div class="bg-gray-800 px-6 py-3 rounded-full">
+                    <i class="fas fa-trophy text-yellow-400 mr-2"></i>
+                    <span>Beat Your Scores</span>
+                </div>
+                <div class="bg-gray-800 px-6 py-3 rounded-full">
+                    <i class="fas fa-users text-green-400 mr-2"></i>
+                    <span>Global Community</span>
+                </div>
+            </div>
+            <a href="#games" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 pulse-animation">
+                Play Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="py-16 px-4 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 game-font">Spam Challenges</h2>
+            <div id="games-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Games will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 game-font">About Geometry Dash Spam</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-gray-300 mb-4">
+                        Welcome to Geometry Dash Spam, the ultimate collection of spam challenges designed to push your skills to the limit!
+                    </p>
+                    <p class="text-gray-300 mb-4">
+                        Our carefully curated selection of spam levels will help you improve your timing, precision, and consistency in Geometry Dash.
+                    </p>
+                    <p class="text-gray-300">
+                        Whether you're a beginner looking to improve your basics or a pro seeking the ultimate challenge, you'll find something here for you.
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">Features</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Multiple difficulty levels</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Track your progress</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Compete with friends</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Regular new challenges</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 py-8 px-4">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-2xl hover:text-cyan-400 transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-2xl hover:text-cyan-400 transition"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-2xl hover:text-cyan-400 transition"><i class="fab fa-discord"></i></a>
+                <a href="#" class="text-2xl hover:text-cyan-400 transition"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="text-gray-400">&copy; 2024 Geometry Dash Spam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Google Analytics -->
+    <div style="display: none;">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5EPY7GNTJD"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5EPY7GNTJD');
+        </script>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
 </html>

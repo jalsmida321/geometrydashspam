@@ -1,7 +1,7 @@
 {
     "rewrites": [
       {
-        "source": "/:path((?!games/).*)",
+        "source": "/((?!api/|_next/|games/|.*\\..*).*)",
         "destination": "/index.html"
       }
     ]

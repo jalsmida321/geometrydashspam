@@ -169,16 +169,51 @@ class GameHub {
             // Open game URL in the same tab
             if (game.url) {
                 // Ensure proper path handling for different environments
-                if (game.url.startsWith('/')) {
-                    window.location.href = game.url;
-                } else {
-                    window.location.href = '/' + game.url;
+                const targetUrl = game.url.startsWith('/') ? game.url : '/' + game.url;
+
+                // Add error handling for navigation
+                try {
+                    window.location.href = targetUrl;
+                } catch (error) {
+                    console.error('Navigation error:', error);
+                    this.showNavigationError(game, targetUrl);
                 }
             } else {
                 // Fallback to modal if no URL
                 this.showGameModal(game);
             }
         }
+    }
+
+    showNavigationError(game, targetUrl) {
+        const modal = document.createElement('div');
+        modal.className = 'fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4';
+        modal.innerHTML = `
+            <div class="bg-gray-800 rounded-lg p-6 max-w-md w-full">
+                <div class="text-center mb-4">
+                    <i class="fas fa-exclamation-triangle text-4xl text-yellow-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">页面跳转失败</h3>
+                    <p class="text-gray-300 mb-4">
+                        无法跳转到游戏页面：<br>
+                        <code class="bg-gray-700 px-2 py-1 rounded text-sm">${targetUrl}</code>
+                    </p>
+                </div>
+                <div class="flex gap-3">
+                    <button onclick="window.open('${targetUrl}', '_blank')" class="flex-1 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded font-bold transition">
+                        <i class="fas fa-external-link-alt mr-2"></i>新窗口打开
+                    </button>
+                    <button onclick="this.closest('.fixed').remove()" class="flex-1 bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded font-bold transition">
+                        关闭
+                    </button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        // Close modal on outside click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.remove();
+        });
     }
 
     showGameModal(game) {
@@ -314,10 +349,32 @@ class GameHub {
         this.games.forEach(game => {
             if (game.url) {
                 console.log(`Game "${game.title}" -> ${game.url}`);
+
+                // Test if the URL exists (in production)
+                if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+                    fetch(game.url, { method: 'HEAD' })
+                        .then(response => {
+                            if (response.ok) {
+                                console.log(`✅ ${game.url} - OK (${response.status})`);
+                            } else {
+                                console.error(`❌ ${game.url} - Not found (${response.status})`);
+                            }
+                        })
+                        .catch(error => {
+                            console.error(`❌ ${game.url} - Error:`, error);
+                        });
+                }
             } else {
                 console.warn(`Game "${game.title}" has no URL configured`);
             }
         });
+
+        // Log current environment info
+        console.log('=== Environment Info ===');
+        console.log('Current URL:', window.location.href);
+        console.log('Hostname:', window.location.hostname);
+        console.log('Pathname:', window.location.pathname);
+        console.log('Origin:', window.location.origin);
     }
 }
 

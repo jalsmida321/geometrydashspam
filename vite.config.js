@@ -1,21 +1,42 @@
 import { defineConfig } from 'vite'
+import { readdirSync } from 'fs'
+import { join } from 'path'
+
+// 自动扫描所有HTML文件
+function getAllHtmlFiles() {
+  const input = {}
+
+  // 添加根目录的index.html作为入口
+  input['main'] = './index.html'
+
+  // 扫描根目录的所有HTML文件（除了index.html）
+  const rootFiles = readdirSync('./').filter(file =>
+    file.endsWith('.html') && file !== 'index.html'
+  )
+  rootFiles.forEach(file => {
+    const name = file.replace('.html', '')
+    input[name] = `./${file}`
+  })
+
+  // 扫描games目录的所有HTML文件
+  try {
+    const gameFiles = readdirSync('./games').filter(file => file.endsWith('.html'))
+    gameFiles.forEach(file => {
+      const name = file.replace('.html', '')
+      input[name] = `./games/${file}`
+    })
+  } catch (error) {
+    console.log('games目录不存在或为空')
+  }
+
+  return input
+}
 
 export default defineConfig({
   build: {
     outDir: 'dist',
     rollupOptions: {
-      input: {
-        main: './index.html',
-        // 明确列出所有游戏页面，确保没有遗漏
-        'aka-geometry-dash-spam': './games/aka-geometry-dash-spam.html',
-        'Geometry-Dash-Spam-Test': './games/Geometry-Dash-Spam-Test.html',
-        'geometry-dash-spam-test': './geometry-dash-spam-test.html',
-        'geometry-dash-spam-challenge': './games/geometry-dash-spam-challenge.html',
-        'geometry-dash-spam-chall': './games/geometry-dash-spam-chall.html',
-        'geometry-dash-spam-master': './games/geometry-dash-spam-master.html',
-        'geometry-dash-spam-wave': './games/geometry-dash-spam-wave.html',
-        'geometry-dash-wave-spam': './games/geometry-dash-wave-spam.html'
-      }
+      input: getAllHtmlFiles()
     }
   },
   server: {

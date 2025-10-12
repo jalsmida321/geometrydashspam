@@ -7,7 +7,7 @@ const gamesConfig = {
             title: "Geometry Dash Spam Test",
             description: "Test your spamming skills in this exciting Geometry Dash challenge!",
             image: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-spam-test.png",
-            url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-spam-test.html",
+            url: "/games/geometry-dash-spam-test.html",
             difficulty: 'Easy',
             color: 'from-blue-500 to-cyan-600',
             plays: 15420,
@@ -19,7 +19,7 @@ const gamesConfig = {
             title: "Geometry Dash Spam Challenge",
             description: "Push your limits in this intense Geometry Dash spam challenge!",
             image: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-spam-challenge.png",
-            url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-Spam-Challenge.html",
+            url: "/games/geometry-dash-spam-challenge.html",
             difficulty: 'Medium',
             color: 'from-purple-500 to-pink-600',
             plays: 12340,
@@ -31,7 +31,7 @@ const gamesConfig = {
             title: "Geometry Dash Spam Master",
             description: "Become the ultimate spam master in this Geometry Dash game!",
             image: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-spam-master.png",
-            url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-Spam-Master.html",
+            url: "/games/geometry-dash-spam-master.html",
             difficulty: 'Hard',
             color: 'from-orange-500 to-red-600',
             plays: 9876,
@@ -43,7 +43,7 @@ const gamesConfig = {
             title: "Geometry Dash Spam Wave",
             description: "Master the wave in this challenging Geometry Dash spam game!",
             image: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-spam-wave.png",
-            url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-Spam-Wave.html",
+            url: "/games/geometry-dash-spam-wave.html",
             difficulty: 'Hard',
             color: 'from-cyan-500 to-blue-600',
             plays: 8765,
@@ -55,7 +55,7 @@ const gamesConfig = {
             title: "Geometry Dash Spam Chall",
             description: "Take on the ultimate spam challenge in this Geometry Dash game!",
             image: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-spam-chall.png",
-            url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-spam-chall.html",
+            url: "/games/geometry-dash-spam-chall.html",
             difficulty: 'Extreme',
             color: 'from-red-500 to-yellow-600',
             plays: 7654,
@@ -67,7 +67,7 @@ const gamesConfig = {
             title: "AKA Geometry Dash Spam",
             description: "Experience a unique twist on Geometry Dash spam gameplay!",
             image: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/AKA-geometry-dash-spam.png",
-            url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/The-Great-Escape-AKA-Geometry-Spam.html",
+            url: "/games/aka-geometry-dash-spam.html",
             difficulty: 'Medium',
             color: 'from-green-500 to-teal-600',
             plays: 6789,
@@ -79,7 +79,7 @@ const gamesConfig = {
             title: "Geometry Dash Wave Spam",
             description: "This is geometry dash wave spam as much as you can and try to get through the impossible level",
             image: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-wave-spam.png",
-            url: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-wave-spam.html",
+            url: "/games/geometry-dash-wave-spam.html",
             difficulty: 'Extreme',
             color: 'from-indigo-500 to-purple-600',
             plays: 5432,
@@ -165,9 +165,9 @@ class GameHub {
             // Track game play (you can integrate with analytics here)
             console.log(`Playing game: ${game.title}`);
             
-            // Open game URL in new tab
+            // Open game URL in the same tab
             if (game.url) {
-                window.open(game.url, '_blank');
+                window.location.href = game.url;
             } else {
                 // Fallback to modal if no URL
                 this.showGameModal(game);

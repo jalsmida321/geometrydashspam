@@ -14,4 +14,44 @@
     <loc>https://geometrydashspam.com/trending</loc>
     <changefreq>hourly</changefreq>
   </url>
+  <url>
+    <loc>https://geometrydashspam.com/games/aka-geometry-dash-spam.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://geometrydashspam.com/games/geometry-dash-spam-challenge.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://geometrydashspam.com/games/geometry-dash-spam-chall.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://geometrydashspam.com/games/geometry-dash-spam-master.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://geometrydashspam.com/games/geometry-dash-spam-wave.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://geometrydashspam.com/games/geometry-dash-wave-spam.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://geometrydashspam.com/games/Geometry-Dash-Spam-Test.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://geometrydashspam.com/geometry-dash-spam-test.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

@@ -8,8 +8,32 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometry Dash Spam - Ultimate Spamming Challenges</title>
-    <meta name="description" content="Explore various Geometry Dash spam challenges and test your skills in this exciting collection of spamming games. Improve your Geometry Dash techniques and become a spam master!" />
-    <meta name="keywords" content="Geometry Dash, spam, challenges, games, skills, test" />
+    <meta name="description" content="Play Geometry Dash Spam games online! Test your clicking speed with our spam challenge, wave spam, and 100 CPS test. Master the ultimate spamming techniques and improve your Geometry Dash skills." />
+    <meta name="keywords" content="geometry dash spam, geometry dash spam test, geometry dash spam challenge, geometry dash spam click, geometry dash spam wave, geometry dash spam test 100, geometry dash unblocked spam, geometry spam, geometry dash click test, spam challenge, click test, CPS test" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Geometry Dash Spam",
+        "description": "Play Geometry Dash Spam games online! Test your clicking speed with our spam challenge, wave spam, and 100 CPS test.",
+        "url": "https://geometrydashspam.com",
+        "genre": ["Rhythm Game", "Skill Game", "Click Test"],
+        "keywords": "geometry dash spam, click test, CPS test, spam challenge",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "ratingCount": "1000"
+        }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -58,6 +82,7 @@
                 <div class="hidden md:flex space-x-6">
                     <a href="#home" class="hover:text-cyan-400 transition">Home</a>
                     <a href="#games" class="hover:text-cyan-400 transition">Games</a>
+                    <a href="#leaderboard" class="hover:text-cyan-400 transition">Leaderboard</a>
                     <a href="#about" class="hover:text-cyan-400 transition">About</a>
                     <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
                 </div>
@@ -70,6 +95,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-gray-700 px-4 py-2">
             <a href="#home" class="block py-2 hover:text-cyan-400 transition">Home</a>
             <a href="#games" class="block py-2 hover:text-cyan-400 transition">Games</a>
+            <a href="#leaderboard" class="block py-2 hover:text-cyan-400 transition">Leaderboard</a>
             <a href="#about" class="block py-2 hover:text-cyan-400 transition">About</a>
             <a href="#contact" class="block py-2 hover:text-cyan-400 transition">Contact</a>
         </div>
@@ -82,25 +108,34 @@
                 Geometry Dash Spam
             </h2>
             <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Ultimate spamming challenges to test your skills and become a Geometry Dash master!
+                Master Geometry Dash Spam challenges! Test your clicking speed with our spam tests, wave spam, and 100 CPS challenges. Improve your skills and dominate the leaderboard!
             </p>
             <div class="flex flex-wrap justify-center gap-4 mb-12">
                 <div class="bg-gray-800 px-6 py-3 rounded-full">
-                    <i class="fas fa-gamepad text-cyan-400 mr-2"></i>
-                    <span>Multiple Challenges</span>
+                    <i class="fas fa-mouse text-cyan-400 mr-2"></i>
+                    <span>100 CPS Test</span>
+                </div>
+                <div class="bg-gray-800 px-6 py-3 rounded-full">
+                    <i class="fas fa-wave-square text-purple-400 mr-2"></i>
+                    <span>Wave Spam</span>
+                </div>
+                <div class="bg-gray-800 px-6 py-3 rounded-full">
+                    <i class="fas fa-tachometer-alt text-red-400 mr-2"></i>
+                    <span>Click Test</span>
                 </div>
                 <div class="bg-gray-800 px-6 py-3 rounded-full">
                     <i class="fas fa-trophy text-yellow-400 mr-2"></i>
-                    <span>Beat Your Scores</span>
-                </div>
-                <div class="bg-gray-800 px-6 py-3 rounded-full">
-                    <i class="fas fa-users text-green-400 mr-2"></i>
-                    <span>Global Community</span>
+                    <span>Global Leaderboard</span>
                 </div>
             </div>
-            <a href="#games" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 pulse-animation">
-                Play Now
-            </a>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#games" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 pulse-animation">
+                    Play Now
+                </a>
+                <a href="/geometry-dash-spam-test.html" class="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105">
+                    <i class="fas fa-tachometer-alt mr-2"></i>Take 100 CPS Test
+                </a>
+            </div>
         </div>
     </section>
 
@@ -110,6 +145,37 @@
             <h2 class="text-4xl font-bold text-center mb-12 game-font">Spam Challenges</h2>
             <div id="games-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 <!-- Games will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section id="leaderboard" class="py-16 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 game-font">Global Leaderboard</h2>
+            <div class="max-w-6xl mx-auto">
+                <div class="bg-gray-800 rounded-lg p-6 shadow-2xl">
+                    <div class="mb-4 flex justify-between items-center">
+                        <h3 class="text-2xl font-semibold text-cyan-400">
+                            <i class="fas fa-trophy mr-2"></i>Top Players
+                        </h3>
+                        <a href="https://spamchallenge.pages.dev/#/leaderboard" target="_blank" class="text-sm text-gray-400 hover:text-cyan-400 transition">
+                            <i class="fas fa-external-link-alt mr-1"></i>Open Full Leaderboard
+                        </a>
+                    </div>
+                    <div class="leaderboard-container" style="height: 600px; overflow: hidden; border-radius: 8px;">
+                        <iframe
+                            src="https://spamchallenge.pages.dev/#/leaderboard"
+                            style="width: 100%; height: 100%; border: none; border-radius: 8px;"
+                            title="Global Leaderboard"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="mt-4 text-center text-gray-400 text-sm">
+                        <i class="fas fa-info-circle mr-1"></i>
+                        View the complete leaderboard and track your progress
+                    </div>
+                </div>
             </div>
         </div>
     </section>

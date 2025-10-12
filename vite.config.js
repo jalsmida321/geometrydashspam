@@ -37,7 +37,8 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: getAllHtmlFiles()
-    }
+    },
+    copyPublicDir: true  // 确保public目录的文件被复制到构建输出
   },
   server: {
     port: 3000

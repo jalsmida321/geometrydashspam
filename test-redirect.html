@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Test - Geometry Dash Spam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">路径测试页面</h1>
+
+        <div class="bg-gray-800 p-6 rounded-lg mb-6">
+            <h2 class="text-xl font-bold mb-4">当前环境信息：</h2>
+            <p><strong>当前URL:</strong> <span id="current-url"></span></p>
+            <p><strong>域名:</strong> <span id="domain"></span></p>
+            <p><strong>路径:</strong> <span id="path"></span></p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg mb-6">
+            <h2 class="text-xl font-bold mb-4">游戏链接测试：</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button onclick="testRedirect('/games/aka-geometry-dash-spam.html')" class="bg-blue-500 hover:bg-blue-600 p-3 rounded">
+                    测试 aka-geometry-dash-spam.html
+                </button>
+                <button onclick="testRedirect('/games/geometry-dash-spam-wave.html')" class="bg-green-500 hover:bg-green-600 p-3 rounded">
+                    测试 geometry-dash-spam-wave.html
+                </button>
+                <button onclick="testRedirect('/games/Geometry-Dash-Spam-Test.html')" class="bg-purple-500 hover:bg-purple-600 p-3 rounded">
+                    测试 Geometry-Dash-Spam-Test.html
+                </button>
+                <button onclick="testRedirect('/index.html')" class="bg-red-500 hover:bg-red-600 p-3 rounded">
+                    测试 index.html
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg">
+            <h2 class="text-xl font-bold mb-4">测试结果：</h2>
+            <div id="test-results" class="text-gray-300"></div>
+        </div>
+
+        <div class="mt-6">
+            <a href="/index.html" class="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-full inline-block">
+                返回首页
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 显示当前环境信息
+        document.getElementById('current-url').textContent = window.location.href;
+        document.getElementById('domain').textContent = window.location.origin;
+        document.getElementById('path').textContent = window.location.pathname;
+
+        function testRedirect(url) {
+            const result = document.getElementById('test-results');
+            const timestamp = new Date().toLocaleTimeString();
+
+            result.innerHTML += `
+                <div class="mb-3 p-3 bg-gray-700 rounded">
+                    <strong>[${timestamp}]</strong> 测试跳转到: ${url}<br>
+                    <button onclick="window.location.href='${url}'" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded mt-2">
+                        立即跳转
+                    </button>
+                    <button onclick="window.open('${url}', '_blank')" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded mt-2 ml-2">
+                        新窗口打开
+                    </button>
+                </div>
+            `;
+        }
+
+        // 测试所有游戏文件是否存在
+        const gameUrls = [
+            '/games/aka-geometry-dash-spam.html',
+            '/games/geometry-dash-spam-wave.html',
+            '/games/Geometry-Dash-Spam-Test.html',
+            '/games/geometry-dash-spam-challenge.html',
+            '/games/geometry-dash-spam-master.html',
+            '/games/geometry-dash-spam-chall.html',
+            '/games/geometry-dash-wave-spam.html'
+        ];
+
+        console.log('=== 游戏URL测试 ===');
+        gameUrls.forEach(url => {
+            console.log(`检查游戏文件: ${url}`);
+        });
+    </script>
+</body>
+</html>

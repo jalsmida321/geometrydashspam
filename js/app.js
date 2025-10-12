@@ -7,7 +7,7 @@ const gamesConfig = {
             title: "Geometry Dash Spam Test",
             description: "Test your spamming skills in this exciting Geometry Dash challenge!",
             image: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-spam-test.png",
-            url: "/games/geometry-dash-spam-test.html",
+            url: "/games/Geometry-Dash-Spam-Test.html",
             difficulty: 'Easy',
             color: 'from-blue-500 to-cyan-600',
             plays: 15420,
@@ -97,6 +97,7 @@ class GameHub {
     }
 
     init() {
+        this.validateGameUrls();
         this.renderGames();
         this.setupEventListeners();
         this.setupSmoothScrolling();
@@ -164,10 +165,15 @@ class GameHub {
         if (game) {
             // Track game play (you can integrate with analytics here)
             console.log(`Playing game: ${game.title}`);
-            
+
             // Open game URL in the same tab
             if (game.url) {
-                window.location.href = game.url;
+                // Ensure proper path handling for different environments
+                if (game.url.startsWith('/')) {
+                    window.location.href = game.url;
+                } else {
+                    window.location.href = '/' + game.url;
+                }
             } else {
                 // Fallback to modal if no URL
                 this.showGameModal(game);
@@ -301,6 +307,17 @@ class GameHub {
             rating: gameData.rating || 0
         });
         this.renderGames(this.currentFilter);
+    }
+
+    // Validate that all game URLs exist (for debugging)
+    validateGameUrls() {
+        this.games.forEach(game => {
+            if (game.url) {
+                console.log(`Game "${game.title}" -> ${game.url}`);
+            } else {
+                console.warn(`Game "${game.title}" has no URL configured`);
+            }
+        });
     }
 }
 

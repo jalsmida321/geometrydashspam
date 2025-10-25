@@ -1,0 +1,37 @@
+# 301重定向规则 - 修复Google Search Console 404错误
+RewriteEngine On
+
+# 处理具体的游戏页面重定向
+RewriteRule ^game/Geometry-Dash-Wave-Spam$ /games/geometry-dash-wave-spam.html [L,R=301]
+RewriteRule ^game/Geometry-Dash-Spam-Challenge-Chall$ /games/geometry-dash-spam-chall.html [L,R=301]
+RewriteRule ^game/AKA-Geometry-Dash-Spam$ /games/aka-geometry-dash-spam.html [L,R=301]
+RewriteRule ^game/Geometry-Dash-Spam-Master$ /games/geometry-dash-spam-master.html [L,R=301]
+RewriteRule ^game/Geometry-Dash-Spam-Wave$ /games/geometry-dash-spam-wave.html [L,R=301]
+
+# 通用规则：处理 /game/ 目录到 /games/ 的重定向（备用规则）
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^game/(.*)$ /games/$1.html [L,R=301]
+
+# 阻止Cloudflare邮件保护链接被索引
+RewriteRule ^cdn-cgi/l/email-protection$ - [F,NC]
+
+# 安全头部设置
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options SAMEORIGIN
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# 压缩设置
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>

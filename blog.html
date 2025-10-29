@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Dash Blog - Tips, Updates & News</title>
+    <meta name="description" content="Discover the latest Geometry Dash tips, tricks, game updates, and community news. Master your skills with expert guides and stay connected with the GD community.">
+    <meta name="keywords" content="Geometry Dash blog, GD tips, game updates, community news, rhythm game guides, spam techniques, wave control">
+    <meta name="robots" content="index, follow">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+        .game-font { font-family: 'Orbitron', monospace; }
+        .gradient-text {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 3s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .blog-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+        .tag-pill {
+            transition: all 0.2s ease;
+        }
+        .tag-pill:hover {
+            transform: scale(1.05);
+        }
+        .featured-article {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-cube text-2xl text-cyan-400"></i>
+                    <h1 class="text-2xl font-bold game-font gradient-text">Geometry Dash Blog</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/index.html" class="hover:text-cyan-400 transition">
+                        <i class="fas fa-home mr-1"></i>Home
+                    </a>
+                    <a href="#tips" class="hover:text-cyan-400 transition">Tips & Tricks</a>
+                    <a href="#updates" class="hover:text-cyan-400 transition">Game Updates</a>
+                    <a href="#community" class="hover:text-cyan-400 transition">Community</a>
+                    <a href="/geometry-dash-spam-test.html" class="hover:text-cyan-400 transition">
+                        <i class="fas fa-tachometer-alt mr-1"></i>CPS Test
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700 px-4 py-2">
+            <a href="/index.html" class="block py-2 hover:text-cyan-400 transition">
+                <i class="fas fa-home mr-1"></i>Home
+            </a>
+            <a href="#tips" class="block py-2 hover:text-cyan-400 transition">Tips & Tricks</a>
+            <a href="#updates" class="block py-2 hover:text-cyan-400 transition">Game Updates</a>
+            <a href="#community" class="block py-2 hover:text-cyan-400 transition">Community</a>
+            <a href="/geometry-dash-spam-test.html" class="block py-2 hover:text-cyan-400 transition">
+                <i class="fas fa-tachometer-alt mr-1"></i>CPS Test
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl md:text-6xl font-bold game-font mb-6 gradient-text">
+                Geometry Dash Blog
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Master the game with expert tips, stay updated with latest news, and connect with the amazing Geometry Dash community
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <div class="bg-gray-800 px-6 py-3 rounded-full">
+                    <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>
+                    <span>Expert Tips</span>
+                </div>
+                <div class="bg-gray-800 px-6 py-3 rounded-full">
+                    <i class="fas fa-newspaper text-cyan-400 mr-2"></i>
+                    <span>Latest Updates</span>
+                </div>
+                <div class="bg-gray-800 px-6 py-3 rounded-full">
+                    <i class="fas fa-users text-purple-400 mr-2"></i>
+                    <span>Community News</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="py-12 px-4">
+        <div class="container mx-auto">
+            <div class="featured-article rounded-xl p-8 shadow-2xl">
+                <div class="flex items-center mb-4">
+                    <span class="bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+                        <i class="fas fa-star mr-1"></i>Featured
+                    </span>
+                    <span class="ml-4 text-gray-300">
+                        <i class="fas fa-clock mr-1"></i>
+                        <span id="featured-date">Loading...</span>
+                    </span>
+                </div>
+                <h3 class="text-3xl font-bold mb-4" id="featured-title">Loading featured article...</h3>
+                <p class="text-lg text-gray-200 mb-6" id="featured-excerpt">Loading content...</p>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img src="/images/author-avatar.jpg" alt="Author" class="w-10 h-10 rounded-full mr-3" id="featured-author-avatar">
+                        <div>
+                            <p class="font-semibold" id="featured-author-name">Loading author...</p>
+                            <p class="text-sm text-gray-300" id="featured-author-role">Loading role...</p>
+                        </div>
+                    </div>
+                    <a href="#" id="featured-link" class="bg-white text-purple-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                        Read Full Article
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filters -->
+    <section class="py-8 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap justify-center gap-3" id="category-filters">
+                <button class="tag-pill bg-cyan-500 hover:bg-cyan-600 px-4 py-2 rounded-full text-sm font-semibold" data-category="all">
+                    All Articles
+                </button>
+                <button class="tag-pill bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-full text-sm font-semibold" data-category="tips">
+                    <i class="fas fa-lightbulb mr-1"></i>Tips & Tricks
+                </button>
+                <button class="tag-pill bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-full text-sm font-semibold" data-category="updates">
+                    <i class="fas fa-newspaper mr-1"></i>Game Updates
+                </button>
+                <button class="tag-pill bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-full text-sm font-semibold" data-category="community">
+                    <i class="fas fa-users mr-1"></i>Community
+                </button>
+                <button class="tag-pill bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-full text-sm font-semibold" data-category="tutorials">
+                    <i class="fas fa-graduation-cap mr-1"></i>Tutorials
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="py-12 px-4 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 game-font">Latest Articles</h2>
+            <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog posts will be dynamically loaded here -->
+            </div>
+            <div class="text-center mt-12">
+                <button id="load-more-btn" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-8 py-3 rounded-full font-semibold transition">
+                    Load More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-2xl">
+            <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-center">
+                <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+                <p class="text-lg mb-6">Get the latest Geometry Dash tips, news, and exclusive content delivered to your inbox</p>
+                <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" required
+                           class="flex-1 px-4 py-3 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                    <button type="submit" class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                        Subscribe
+                    </button>
+                </form>
+                <p id="newsletter-message" class="mt-4 text-sm"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 px-4">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="/index.html" class="text-gray-400 hover:text-cyan-400 transition">Home</a>
+                <span class="text-gray-600">|</span>
+                <a href="/blog.html" class="text-gray-400 hover:text-cyan-400 transition">Blog</a>
+                <span class="text-gray-600">|</span>
+                <a href="/privacy-policy.html" class="text-gray-400 hover:text-cyan-400 transition">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="/terms-of-service.html" class="text-gray-400 hover:text-cyan-400 transition">Terms of Service</a>
+            </div>
+            <p class="text-gray-400">&copy; 2024 Geometry Dash Spam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/blog.js"></script>
+</body>
+</html>

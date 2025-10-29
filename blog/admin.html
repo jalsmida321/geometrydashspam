@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Admin - Geometry Dash Spam</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .admin-sidebar {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+        .form-input {
+            background: #374151;
+            border: 1px solid #4b5563;
+            transition: all 0.2s ease;
+        }
+        .form-input:focus {
+            border-color: #3b82f6;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            transition: all 0.2s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        .article-item {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            transition: all 0.3s ease;
+        }
+        .article-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar w-64 p-6">
+            <div class="mb-8">
+                <h1 class="text-2xl font-bold mb-2">Blog Admin</h1>
+                <p class="text-gray-400 text-sm">Manage your blog content</p>
+            </div>
+
+            <nav class="space-y-2">
+                <a href="#dashboard" class="flex items-center p-3 rounded-lg bg-gray-700 hover:bg-gray-600 transition" onclick="showSection('dashboard')">
+                    <i class="fas fa-dashboard mr-3"></i>
+                    Dashboard
+                </a>
+                <a href="#articles" class="flex items-center p-3 rounded-lg hover:bg-gray-600 transition" onclick="showSection('articles')">
+                    <i class="fas fa-newspaper mr-3"></i>
+                    Articles
+                </a>
+                <a href="#new-article" class="flex items-center p-3 rounded-lg hover:bg-gray-600 transition" onclick="showSection('new-article')">
+                    <i class="fas fa-plus mr-3"></i>
+                    New Article
+                </a>
+                <a href="#settings" class="flex items-center p-3 rounded-lg hover:bg-gray-600 transition" onclick="showSection('settings')">
+                    <i class="fas fa-cog mr-3"></i>
+                    Settings
+                </a>
+                <a href="/blog.html" class="flex items-center p-3 rounded-lg hover:bg-gray-600 transition">
+                    <i class="fas fa-eye mr-3"></i>
+                    View Blog
+                </a>
+            </nav>
+
+            <div class="mt-auto pt-8">
+                <button onclick="logout()" class="w-full flex items-center justify-center p-3 bg-red-600 hover:bg-red-700 rounded-lg transition">
+                    <i class="fas fa-sign-out-alt mr-2"></i>
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <!-- Dashboard Section -->
+            <section id="dashboard-section" class="admin-section">
+                <h2 class="text-3xl font-bold mb-8">Dashboard</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-blue-100 text-sm">Total Articles</p>
+                                <p class="text-3xl font-bold" id="total-articles">0</p>
+                            </div>
+                            <i class="fas fa-newspaper text-4xl text-blue-200"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-green-100 text-sm">Total Views</p>
+                                <p class="text-3xl font-bold" id="total-views">0</p>
+                            </div>
+                            <i class="fas fa-eye text-4xl text-green-200"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-purple-100 text-sm">Authors</p>
+                                <p class="text-3xl font-bold" id="total-authors">0</p>
+                            </div>
+                            <i class="fas fa-users text-4xl text-purple-200"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-orange-600 to-orange-700 rounded-xl p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-orange-100 text-sm">Categories</p>
+                                <p class="text-3xl font-bold">4</p>
+                            </div>
+                            <i class="fas fa-tags text-4xl text-orange-200"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-4">Recent Articles</h3>
+                    <div id="recent-articles-list">
+                        <!-- Recent articles will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Articles Section -->
+            <section id="articles-section" class="admin-section hidden">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-3xl font-bold">Articles</h2>
+                    <button onclick="showSection('new-article')" class="btn-primary px-4 py-2 rounded-lg">
+                        <i class="fas fa-plus mr-2"></i>New Article
+                    </button>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <div class="mb-4 flex justify-between items-center">
+                        <input type="text" placeholder="Search articles..." class="form-input px-4 py-2 rounded-lg flex-1 mr-4" id="search-articles">
+                        <select class="form-input px-4 py-2 rounded-lg" id="filter-category">
+                            <option value="">All Categories</option>
+                            <option value="tips">Tips & Tricks</option>
+                            <option value="updates">Game Updates</option>
+                            <option value="community">Community</option>
+                            <option value="tutorials">Tutorials</option>
+                        </select>
+                    </div>
+
+                    <div id="articles-list">
+                        <!-- Articles list will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Article Section -->
+            <section id="new-article-section" class="admin-section hidden">
+                <h2 class="text-3xl font-bold mb-8">Create New Article</h2>
+
+                <form id="article-form" class="bg-gray-800 rounded-xl p-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="lg:col-span-2 space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Article Title</label>
+                                <input type="text" name="title" required class="form-input w-full px-4 py-2 rounded-lg">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Article Excerpt</label>
+                                <textarea name="excerpt" rows="3" required class="form-input w-full px-4 py-2 rounded-lg"></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Article Content</label>
+                                <textarea name="content" rows="15" required class="form-input w-full px-4 py-2 rounded-lg"></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Tags (comma separated)</label>
+                                <input type="text" name="tags" placeholder="tag1, tag2, tag3" class="form-input w-full px-4 py-2 rounded-lg">
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Category</label>
+                                <select name="category" required class="form-input w-full px-4 py-2 rounded-lg">
+                                    <option value="">Select Category</option>
+                                    <option value="tips">Tips & Tricks</option>
+                                    <option value="updates">Game Updates</option>
+                                    <option value="community">Community</option>
+                                    <option value="tutorials">Tutorials</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Author Name</label>
+                                <input type="text" name="author_name" required class="form-input w-full px-4 py-2 rounded-lg">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Author Role</label>
+                                <input type="text" name="author_role" required class="form-input w-full px-4 py-2 rounded-lg">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Author Bio</label>
+                                <textarea name="author_bio" rows="3" class="form-input w-full px-4 py-2 rounded-lg"></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Author Avatar URL</label>
+                                <input type="url" name="author_avatar" class="form-input w-full px-4 py-2 rounded-lg">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Feature Image URL</label>
+                                <input type="url" name="image" class="form-input w-full px-4 py-2 rounded-lg">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Reading Time (minutes)</label>
+                                <input type="number" name="reading_time" min="1" class="form-input w-full px-4 py-2 rounded-lg">
+                            </div>
+
+                            <div class="flex items-center">
+                                <input type="checkbox" name="featured" class="mr-2">
+                                <label for="featured" class="text-sm">Featured Article</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex justify-end space-x-4">
+                        <button type="button" onclick="showSection('articles')" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 rounded-lg transition">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn-primary px-6 py-2 rounded-lg">
+                            <i class="fas fa-save mr-2"></i>Save Article
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings-section" class="admin-section hidden">
+                <h2 class="text-3xl font-bold mb-8">Settings</h2>
+
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-4">Blog Configuration</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Blog Title</label>
+                            <input type="text" value="Geometry Dash Blog" class="form-input w-full px-4 py-2 rounded-lg">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Blog Description</label>
+                            <textarea rows="3" class="form-input w-full px-4 py-2 rounded-lg">Discover the latest Geometry Dash tips, tricks, game updates, and community news.</textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Articles per Page</label>
+                            <input type="number" value="9" min="1" class="form-input w-full px-4 py-2 rounded-lg">
+                        </div>
+                        <button class="btn-primary px-6 py-2 rounded-lg">
+                            <i class="fas fa-save mr-2"></i>Save Settings
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/blog.js"></script>
+    <script>
+        // Admin functionality
+        class BlogAdmin {
+            constructor() {
+                this.currentSection = 'dashboard';
+                this.init();
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.loadDashboardData();
+                this.loadArticles();
+            }
+
+            setupEventListeners() {
+                // Article form submission
+                const articleForm = document.getElementById('article-form');
+                if (articleForm) {
+                    articleForm.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        this.saveArticle(e.target);
+                    });
+                }
+
+                // Search functionality
+                const searchInput = document.getElementById('search-articles');
+                if (searchInput) {
+                    searchInput.addEventListener('input', (e) => {
+                        this.searchArticles(e.target.value);
+                    });
+                }
+
+                // Category filter
+                const categoryFilter = document.getElementById('filter-category');
+                if (categoryFilter) {
+                    categoryFilter.addEventListener('change', (e) => {
+                        this.filterByCategory(e.target.value);
+                    });
+                }
+            }
+
+            loadDashboardData() {
+                const articles = window.blogManager.articles;
+
+                // Update stats
+                document.getElementById('total-articles').textContent = articles.length;
+
+                const totalViews = articles.reduce((sum, article) => sum + article.views, 0);
+                document.getElementById('total-views').textContent = totalViews.toLocaleString();
+
+                const uniqueAuthors = new Set(articles.map(article => article.author.name));
+                document.getElementById('total-authors').textContent = uniqueAuthors.size;
+
+                // Load recent articles
+                this.loadRecentArticles();
+            }
+
+            loadRecentArticles() {
+                const recentArticles = window.blogManager.articles.slice(0, 5);
+                const container = document.getElementById('recent-articles-list');
+
+                container.innerHTML = recentArticles.map(article => `
+                    <div class="article-item p-4 rounded-lg mb-3">
+                        <div class="flex justify-between items-start">
+                            <div class="flex-1">
+                                <h4 class="font-semibold mb-1">${article.title}</h4>
+                                <p class="text-sm text-gray-400">${this.formatDate(article.publishDate)} • ${article.views} views</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button onclick="editArticle(${article.id})" class="text-blue-400 hover:text-blue-300">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button onclick="deleteArticle(${article.id})" class="text-red-400 hover:text-red-300">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            loadArticles() {
+                const container = document.getElementById('articles-list');
+                if (!container) return;
+
+                container.innerHTML = window.blogManager.articles.map(article => `
+                    <div class="article-item p-4 rounded-lg mb-3">
+                        <div class="flex justify-between items-start">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-2">
+                                    <h4 class="font-semibold mr-3">${article.title}</h4>
+                                    <span class="bg-${this.getCategoryColor(article.category)}-500 text-white px-2 py-1 rounded text-xs">
+                                        ${this.formatCategory(article.category)}
+                                    </span>
+                                    ${article.featured ? '<span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs ml-2">Featured</span>' : ''}
+                                </div>
+                                <p class="text-sm text-gray-400 mb-2">${article.excerpt}</p>
+                                <p class="text-xs text-gray-500">
+                                    By ${article.author.name} • ${this.formatDate(article.publishDate)} • ${article.views} views • ${article.readingTime} min read
+                                </p>
+                            </div>
+                            <div class="flex space-x-2 ml-4">
+                                <button onclick="editArticle(${article.id})" class="text-blue-400 hover:text-blue-300">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button onclick="deleteArticle(${article.id})" class="text-red-400 hover:text-red-300">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            saveArticle(form) {
+                const formData = new FormData(form);
+                const articleData = {
+                    title: formData.get('title'),
+                    excerpt: formData.get('excerpt'),
+                    content: formData.get('content'),
+                    category: formData.get('category'),
+                    tags: formData.get('tags').split(',').map(tag => tag.trim()),
+                    featured: formData.has('featured'),
+                    readingTime: parseInt(formData.get('reading_time')) || 5,
+                    image: formData.get('image') || '/images/default-article.jpg',
+                    author: {
+                        name: formData.get('author_name'),
+                        role: formData.get('author_role'),
+                        bio: formData.get('author_bio'),
+                        avatar: formData.get('author_avatar') || '/images/default-avatar.jpg'
+                    },
+                    slug: this.generateSlug(formData.get('title'))
+                };
+
+                const newArticle = window.blogManager.addArticle(articleData);
+
+                alert('Article saved successfully!');
+                form.reset();
+                showSection('articles');
+                this.loadDashboardData();
+            }
+
+            editArticle(articleId) {
+                const article = window.blogManager.articles.find(a => a.id === articleId);
+                if (!article) return;
+
+                // Populate form with article data
+                const form = document.getElementById('article-form');
+                form.title.value = article.title;
+                form.excerpt.value = article.excerpt;
+                form.content.value = article.content;
+                form.category.value = article.category;
+                form.tags.value = article.tags.join(', ');
+                form.author_name.value = article.author.name;
+                form.author_role.value = article.author.role;
+                form.author_bio.value = article.author.bio;
+                form.author_avatar.value = article.author.avatar;
+                form.image.value = article.image;
+                form.reading_time.value = article.readingTime;
+                form.featured.checked = article.featured;
+
+                showSection('new-article');
+            }
+
+            deleteArticle(articleId) {
+                if (confirm('Are you sure you want to delete this article?')) {
+                    window.blogManager.deleteArticle(articleId);
+                    this.loadArticles();
+                    this.loadDashboardData();
+                    alert('Article deleted successfully!');
+                }
+            }
+
+            searchArticles(query) {
+                const filtered = window.blogManager.articles.filter(article =>
+                    article.title.toLowerCase().includes(query.toLowerCase()) ||
+                    article.excerpt.toLowerCase().includes(query.toLowerCase())
+                );
+                this.renderFilteredArticles(filtered);
+            }
+
+            filterByCategory(category) {
+                const filtered = category ?
+                    window.blogManager.articles.filter(article => article.category === category) :
+                    window.blogManager.articles;
+                this.renderFilteredArticles(filtered);
+            }
+
+            renderFilteredArticles(articles) {
+                const container = document.getElementById('articles-list');
+                container.innerHTML = articles.map(article => `
+                    <div class="article-item p-4 rounded-lg mb-3">
+                        <div class="flex justify-between items-start">
+                            <div class="flex-1">
+                                <h4 class="font-semibold mb-1">${article.title}</h4>
+                                <p class="text-sm text-gray-400">${this.formatDate(article.publishDate)} • ${article.views} views</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button onclick="editArticle(${article.id})" class="text-blue-400 hover:text-blue-300">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button onclick="deleteArticle(${article.id})" class="text-red-400 hover:text-red-300">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            generateSlug(title) {
+                return title.toLowerCase()
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/(^-|-$)/g, '');
+            }
+
+            getCategoryColor(category) {
+                const colors = {
+                    tips: 'blue',
+                    updates: 'green',
+                    community: 'purple',
+                    tutorials: 'orange'
+                };
+                return colors[category] || 'gray';
+            }
+
+            formatCategory(category) {
+                return category.charAt(0).toUpperCase() + category.slice(1).replace(/([A-Z])/g, ' $1');
+            }
+
+            formatDate(dateString) {
+                const options = { year: 'numeric', month: 'short', day: 'numeric' };
+                return new Date(dateString).toLocaleDateString(undefined, options);
+            }
+        }
+
+        // Section navigation
+        function showSection(section) {
+            document.querySelectorAll('.admin-section').forEach(sec => {
+                sec.classList.add('hidden');
+            });
+
+            const targetSection = document.getElementById(`${section}-section`);
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+            }
+
+            // Update navigation
+            document.querySelectorAll('.admin-sidebar a').forEach(link => {
+                link.classList.remove('bg-gray-700');
+            });
+
+            const activeLink = document.querySelector(`[href="#${section}"]`);
+            if (activeLink) {
+                activeLink.classList.add('bg-gray-700');
+            }
+        }
+
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                window.location.href = '/blog.html';
+            }
+        }
+
+        // Initialize admin panel
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.blogManager) {
+                window.blogAdmin = new BlogAdmin();
+            } else {
+                console.error('Blog manager not found. Please ensure blog.js is loaded first.');
+            }
+        });
+    </script>
+</body>
+</html>

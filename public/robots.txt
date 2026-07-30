@@ -1,17 +1,19 @@
 User-agent: *
 Allow: /
 
-# 阻止索引错误的路径和系统文件
+# Keep private and development paths out of crawl queues.
 Disallow: /game/
 Disallow: /cdn-cgi/
 Disallow: /node_modules/
 Disallow: /.git/
 Disallow: /*.log$
 Disallow: /test-redirect.html
+Disallow: /test-redirects.html
 Disallow: /debug.html
+Disallow: /blog-article-template.html
 
-# 允许正确的游戏页面
+# Public game pages.
 Allow: /games/
 
-# 站点地图位置
+# Canonical sitemap.
 Sitemap: https://geometrydash-spam.com/sitemap.xml

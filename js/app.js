@@ -7,7 +7,7 @@ const gamesConfig = {
             title: "Geometry Dash Spam Test",
             description: "Test your spamming skills in this exciting Geometry Dash challenge!",
             image: "https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-spam-test.png",
-            url: "/games/Geometry-Dash-Spam-Test.html",
+            url: "/geometry-dash-spam-test.html",
             difficulty: 'Easy',
             color: 'from-blue-500 to-cyan-600',
             plays: 15420,

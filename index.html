@@ -1,249 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Geometry Dash Spam - Ultimate Spamming Challenges</title>
-    <meta name="description" content="Play Geometry Dash Spam games online! Test your clicking speed with our spam challenge, wave spam, and 100 CPS test. Master the ultimate spamming techniques and improve your Geometry Dash skills." />
-    <meta name="keywords" content="geometry dash spam, geometry dash spam test, geometry dash spam challenge, geometry dash spam click, geometry dash spam wave, geometry dash spam test 100, geometry dash unblocked spam, geometry spam, geometry dash click test, spam challenge, click test, CPS test" />
-
-    <!-- Structured Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Dash Spam Games: Wave, CPS Tests & Challenges</title>
+    <meta name="description" content="Play free Geometry Dash spam games, practice wave control, test your click speed, and learn how to build a faster, steadier clicking rhythm.">
+    <link rel="canonical" href="https://geometrydash-spam.com/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:title" content="Geometry Dash Spam Games: Wave, CPS Tests & Challenges">
+    <meta property="og:description" content="Play spam challenges, practice wave control, and improve your clicking rhythm with free browser games and practical guides.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geometrydash-spam.com/">
+    <meta property="og:image" content="https://geometrydash-spam.com/images/wave-control-guide.jpg">
+    <meta property="og:image:alt" content="Geometry Dash wave control practice guide">
+    <meta property="og:site_name" content="Geometry Dash Spam">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Geometry Dash Spam Games">
+    <meta name="twitter:description" content="Play free spam challenges and improve your wave control and clicking rhythm.">
+    <meta name="twitter:image" content="https://geometrydash-spam.com/images/wave-control-guide.jpg">
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Game",
-        "name": "Geometry Dash Spam",
-        "description": "Play Geometry Dash Spam games online! Test your clicking speed with our spam challenge, wave spam, and 100 CPS test.",
-        "url": "https://geometrydashspam.com",
-        "genre": ["Rhythm Game", "Skill Game", "Click Test"],
-        "keywords": "geometry dash spam, click test, CPS test, spam challenge",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.5",
-            "ratingCount": "1000"
-        }
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Geometry Dash Spam",
+      "url": "https://geometrydash-spam.com/",
+      "description": "A free collection of browser-based Geometry Dash spam challenges, wave practice games, and click-speed training guides."
     }
     </script>
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
-        .game-font { font-family: 'Orbitron', monospace; }
-        .gradient-text {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
-            background-size: 400% 400%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradient 3s ease infinite;
-        }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .game-card {
-            transition: all 0.3s ease;
-        }
-        .pulse-animation {
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        .line-clamp-2 {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
+        :root { --ink:#070b12; --panel:#101824; --line:#25364b; --cyan:#43e6ff; --lime:#c8ff4d; --muted:#a8b4c4; }
+        html { scroll-behavior:smooth; }
+        body { margin:0; background:var(--ink); color:#f3f7fb; font-family:'Chakra Petch',sans-serif; }
+        body::before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.16; background-image:linear-gradient(rgba(67,230,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(67,230,255,.12) 1px,transparent 1px); background-size:42px 42px; mask-image:linear-gradient(to bottom,#000,transparent 80%); }
+        .display { font-family:'Russo One',sans-serif; letter-spacing:.02em; }
+        .shell { width:min(1180px,calc(100% - 2rem)); margin-inline:auto; }
+        .panel { background:linear-gradient(145deg,rgba(18,29,43,.96),rgba(9,15,24,.96)); border:1px solid var(--line); box-shadow:0 20px 70px rgba(0,0,0,.28); }
+        .eyebrow { color:var(--lime); font-size:.78rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+        .accent { color:var(--cyan); }
+        .game-card { position:relative; overflow:hidden; background:#0e1723; border:1px solid var(--line); transition:transform .2s ease,border-color .2s ease; }
+        .game-card:hover { transform:translateY(-5px); border-color:var(--cyan); }
+        .game-card img { transition:transform .35s ease; }
+        .game-card:hover img { transform:scale(1.04); }
+        .number { color:transparent; -webkit-text-stroke:1px rgba(67,230,255,.55); font-family:'Russo One',sans-serif; }
+        .prose p { color:#bac4d1; line-height:1.8; margin-top:1rem; }
+        .prose h3 { font-family:'Russo One',sans-serif; font-size:1.25rem; margin-top:1.8rem; }
+        summary { cursor:pointer; list-style:none; }
+        summary::-webkit-details-marker { display:none; }
+        details[open] summary span:last-child { transform:rotate(45deg); }
+        @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto}.game-card,.game-card img{transition:none} }
     </style>
 </head>
-<body class="bg-gray-900 text-white">
-    <!-- Navigation -->
-    <nav class="bg-gray-800 shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-cube text-2xl text-cyan-400"></i>
-                    <h1 class="text-2xl font-bold game-font gradient-text">Geometry Dash Spam</h1>
-                </div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#home" class="hover:text-cyan-400 transition">Home</a>
-                    <a href="#games" class="hover:text-cyan-400 transition">Games</a>
-                    <a href="/blog.html" class="hover:text-cyan-400 transition">
-                        <i class="fas fa-blog mr-1"></i>Blog
-                    </a>
-                    <a href="/geometry-dash-spam-test.html" class="hover:text-cyan-400 transition">CPS Test</a>
-                    <a href="#leaderboard" class="hover:text-cyan-400 transition">Leaderboard</a>
-                    <a href="/about.html" class="hover:text-cyan-400 transition">About</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
+<body>
+    <header class="sticky top-0 z-50 border-b border-slate-800 bg-[#070b12]/95 backdrop-blur">
+        <div class="shell flex h-16 items-center justify-between">
+            <a href="/" class="display text-lg"><span class="accent">GD</span> SPAM LAB</a>
+            <button id="menu-button" class="rounded border border-slate-700 px-3 py-2 md:hidden" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+            <nav class="hidden items-center gap-7 text-sm font-semibold md:flex" aria-label="Primary navigation">
+                <a href="#games" class="hover:text-cyan-300">Games</a>
+                <a href="#training" class="hover:text-cyan-300">Training</a>
+                <a href="#faq" class="hover:text-cyan-300">FAQ</a>
+                <a href="/blog.html" class="hover:text-cyan-300">Guides</a>
+                <a href="/geometry-dash-spam-test.html" class="border border-cyan-400 px-4 py-2 text-cyan-300 hover:bg-cyan-400 hover:text-slate-950">CPS Test</a>
+            </nav>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-700 px-4 py-2">
-            <a href="#home" class="block py-2 hover:text-cyan-400 transition">Home</a>
-            <a href="#games" class="block py-2 hover:text-cyan-400 transition">Games</a>
-            <a href="/blog.html" class="block py-2 hover:text-cyan-400 transition">
-                <i class="fas fa-blog mr-1"></i>Blog
-            </a>
-            <a href="/geometry-dash-spam-test.html" class="block py-2 hover:text-cyan-400 transition">CPS Test</a>
-            <a href="#leaderboard" class="block py-2 hover:text-cyan-400 transition">Leaderboard</a>
-            <a href="/about.html" class="block py-2 hover:text-cyan-400 transition">About</a>
-        </div>
-    </nav>
+        <nav id="mobile-menu" class="shell hidden border-t border-slate-800 py-4 md:hidden" aria-label="Mobile navigation">
+            <a href="#games" class="block py-2">Games</a><a href="#training" class="block py-2">Training</a><a href="#faq" class="block py-2">FAQ</a><a href="/blog.html" class="block py-2">Guides</a><a href="/geometry-dash-spam-test.html" class="block py-2 text-cyan-300">CPS Test</a>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="py-20 px-4">
-        <div class="container mx-auto text-center">
-            <h2 class="text-5xl md:text-7xl font-bold game-font mb-6 gradient-text">
-                Geometry Dash Spam
-            </h2>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Master Geometry Dash Spam challenges! Test your clicking speed with our spam tests, wave spam, and 100 CPS challenges. Improve your skills and dominate the leaderboard!
-            </p>
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <div class="bg-gray-800 px-6 py-3 rounded-full">
-                    <i class="fas fa-mouse text-cyan-400 mr-2"></i>
-                    <span>100 CPS Test</span>
-                </div>
-                <div class="bg-gray-800 px-6 py-3 rounded-full">
-                    <i class="fas fa-wave-square text-purple-400 mr-2"></i>
-                    <span>Wave Spam</span>
-                </div>
-                <div class="bg-gray-800 px-6 py-3 rounded-full">
-                    <i class="fas fa-tachometer-alt text-red-400 mr-2"></i>
-                    <span>Click Test</span>
-                </div>
-                <div class="bg-gray-800 px-6 py-3 rounded-full">
-                    <i class="fas fa-trophy text-yellow-400 mr-2"></i>
-                    <span>Global Leaderboard</span>
-                </div>
-            </div>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#games" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 pulse-animation">
-                    Play Now
-                </a>
-                <a href="/geometry-dash-spam-test.html" class="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105">
-                    <i class="fas fa-tachometer-alt mr-2"></i>Take 100 CPS Test
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Games Section -->
-    <section id="games" class="py-16 px-4 bg-gray-800">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-12 game-font">Spam Challenges</h2>
-            <div id="games-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Games will be dynamically loaded here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Leaderboard Section -->
-    <section id="leaderboard" class="py-16 px-4 bg-gray-900">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-12 game-font">Global Leaderboard</h2>
-            <div class="max-w-6xl mx-auto">
-                <div class="bg-gray-800 rounded-lg p-6 shadow-2xl">
-                    <div class="mb-4 flex justify-between items-center">
-                        <h3 class="text-2xl font-semibold text-cyan-400">
-                            <i class="fas fa-trophy mr-2"></i>Top Players
-                        </h3>
-                        <a href="https://spamchallenge.pages.dev/#/leaderboard" target="_blank" class="text-sm text-gray-400 hover:text-cyan-400 transition">
-                            <i class="fas fa-external-link-alt mr-1"></i>Open Full Leaderboard
-                        </a>
-                    </div>
-                    <div class="leaderboard-container" style="height: 600px; overflow: hidden; border-radius: 8px;">
-                        <iframe
-                            src="https://spamchallenge.pages.dev/#/leaderboard"
-                            style="width: 100%; height: 100%; border: none; border-radius: 8px;"
-                            title="Global Leaderboard"
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                    <div class="mt-4 text-center text-gray-400 text-sm">
-                        <i class="fas fa-info-circle mr-1"></i>
-                        View the complete leaderboard and track your progress
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 px-4">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-4xl font-bold text-center mb-12 game-font">About Geometry Dash Spam</h2>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
+    <main>
+        <section class="relative overflow-hidden py-20 md:py-28">
+            <div class="shell grid items-end gap-12 lg:grid-cols-[1.35fr_.65fr]">
                 <div>
-                    <p class="text-gray-300 mb-4">
-                        Welcome to Geometry Dash Spam, the ultimate collection of spam challenges designed to push your skills to the limit!
-                    </p>
-                    <p class="text-gray-300 mb-4">
-                        Our carefully curated selection of spam levels will help you improve your timing, precision, and consistency in Geometry Dash.
-                    </p>
-                    <p class="text-gray-300">
-                        Whether you're a beginner looking to improve your basics or a pro seeking the ultimate challenge, you'll find something here for you.
-                    </p>
+                    <p class="eyebrow mb-5">Browser training arena / free to play</p>
+                    <h1 class="display max-w-4xl text-5xl leading-[.98] sm:text-6xl md:text-8xl">GEOMETRY DASH <span class="accent">SPAM</span></h1>
+                    <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300">Practice fast inputs without losing control. Play wave spam challenges, measure your click rhythm, and build the consistency needed for tight Geometry Dash sections.</p>
+                    <div class="mt-9 flex flex-wrap gap-4">
+                        <a href="/games/geometry-dash-spam-challenge.html" class="bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Play the main challenge</a>
+                        <a href="#games" class="border border-slate-600 px-6 py-3 font-bold hover:border-lime-300 hover:text-lime-300">Browse all games</a>
+                    </div>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">Features</h3>
-                    <ul class="space-y-2">
-                        <li><i class="fas fa-check text-green-400 mr-2"></i>Multiple difficulty levels</li>
-                        <li><i class="fas fa-check text-green-400 mr-2"></i>Track your progress</li>
-                        <li><i class="fas fa-check text-green-400 mr-2"></i>Compete with friends</li>
-                        <li><i class="fas fa-check text-green-400 mr-2"></i>Regular new challenges</li>
-                    </ul>
-                </div>
+                <aside class="panel p-6" aria-label="Quick practice plan">
+                    <p class="eyebrow">10-minute drill</p>
+                    <ol class="mt-6 space-y-5">
+                        <li class="flex gap-4"><span class="number text-3xl">01</span><div><strong class="block">Warm up slowly</strong><span class="text-sm text-slate-400">Find an even rhythm before adding speed.</span></div></li>
+                        <li class="flex gap-4"><span class="number text-3xl">02</span><div><strong class="block">Center the wave</strong><span class="text-sm text-slate-400">Use shorter presses to reduce movement.</span></div></li>
+                        <li class="flex gap-4"><span class="number text-3xl">03</span><div><strong class="block">Rest and repeat</strong><span class="text-sm text-slate-400">Stop if your wrist or fingers feel strained.</span></div></li>
+                    </ol>
+                </aside>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="bg-gray-800 py-8 px-4">
-        <div class="container mx-auto text-center">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="/privacy-policy.html" class="text-gray-400 hover:text-cyan-400 transition">Privacy Policy</a>
-                <span class="text-gray-600">|</span>
-                <a href="/terms-of-service.html" class="text-gray-400 hover:text-cyan-400 transition">Terms of Service</a>
-                <span class="text-gray-600">|</span>
-                <a href="/blog.html" class="text-gray-400 hover:text-cyan-400 transition">Blog</a>
-                <span class="text-gray-600">|</span>
-                <a href="/about.html" class="text-gray-400 hover:text-cyan-400 transition">About</a>
+        <section id="games" class="border-y border-slate-800 bg-[#0a1019] py-20">
+            <div class="shell">
+                <div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+                    <div><p class="eyebrow">Choose a drill</p><h2 class="display mt-3 text-3xl md:text-5xl">Spam challenges</h2></div>
+                    <p class="max-w-md text-slate-400">Start with control, then move toward tighter corridors and faster patterns. Every game opens in your browser.</p>
+                </div>
+                <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                    <a class="game-card lg:col-span-2" href="/games/geometry-dash-spam-challenge.html">
+                        <div class="aspect-[16/8] overflow-hidden"><img src="https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-spam-challenge.png" alt="Geometry Dash Spam Challenge game" class="h-full w-full object-cover" width="960" height="480"></div>
+                        <div class="p-5"><span class="eyebrow">Featured / medium</span><h3 class="display mt-2 text-2xl">Geometry Dash Spam Challenge</h3><p class="mt-2 text-slate-400">Balance rapid clicks with controlled wave movement through a focused challenge course.</p></div>
+                    </a>
+                    <a class="game-card" href="/geometry-dash-spam-test.html"><div class="aspect-video overflow-hidden"><img src="https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-spam-test.png" alt="Geometry Dash Spam Test" class="h-full w-full object-cover" loading="lazy" width="640" height="360"></div><div class="p-5"><span class="eyebrow">Speed check</span><h3 class="display mt-2 text-xl">Spam Test</h3><p class="mt-2 text-sm text-slate-400">Test your input speed and establish a repeatable baseline.</p></div></a>
+                    <a class="game-card" href="/games/geometry-dash-spam-wave.html"><div class="aspect-video overflow-hidden"><img src="https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-spam-wave.png" alt="Geometry Dash Spam Wave game" class="h-full w-full object-cover" loading="lazy" width="640" height="360"></div><div class="p-5"><span class="eyebrow">Wave / hard</span><h3 class="display mt-2 text-xl">Spam Wave</h3><p class="mt-2 text-sm text-slate-400">Practice compact zigzags and steadier corridor control.</p></div></a>
+                    <a class="game-card" href="/games/geometry-dash-spam-master.html"><div class="aspect-video overflow-hidden"><img src="https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-spam-master.png" alt="Geometry Dash Spam Master game" class="h-full w-full object-cover" loading="lazy" width="640" height="360"></div><div class="p-5"><span class="eyebrow">Advanced / hard</span><h3 class="display mt-2 text-xl">Spam Master</h3><p class="mt-2 text-sm text-slate-400">Step up to longer patterns after your rhythm becomes reliable.</p></div></a>
+                    <a class="game-card" href="/games/geometry-dash-wave-spam.html"><div class="aspect-video overflow-hidden"><img src="https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-wave-spam.png" alt="Geometry Dash Wave Spam game" class="h-full w-full object-cover" loading="lazy" width="640" height="360"></div><div class="p-5"><span class="eyebrow">Wave / extreme</span><h3 class="display mt-2 text-xl">Wave Spam</h3><p class="mt-2 text-sm text-slate-400">Try a narrow, demanding wave route when easier drills feel stable.</p></div></a>
+                    <a class="game-card" href="/games/geometry-dash-spam-chall.html"><div class="aspect-video overflow-hidden"><img src="https://pub-9cd8442eae39491496da90d370d65538.r2.dev/geometry-dash-spam-chall.png" alt="Geometry Dash Spam Challenge Chall game" class="h-full w-full object-cover" loading="lazy" width="640" height="360"></div><div class="p-5"><span class="eyebrow">Endurance / extreme</span><h3 class="display mt-2 text-xl">Challenge Chall</h3><p class="mt-2 text-sm text-slate-400">A tougher follow-up built for players seeking an endurance test.</p></div></a>
+                    <a class="game-card" href="/games/aka-geometry-dash-spam.html"><div class="aspect-video overflow-hidden"><img src="https://pub-9cd8442eae39491496da90d370d65538.r2.dev/AKA-geometry-dash-spam.png" alt="AKA Geometry Dash Spam game" class="h-full w-full object-cover" loading="lazy" width="640" height="360"></div><div class="p-5"><span class="eyebrow">Alternative / medium</span><h3 class="display mt-2 text-xl">AKA Geometry Dash Spam</h3><p class="mt-2 text-sm text-slate-400">Change the visual pattern while training the same core timing skill.</p></div></a>
+                </div>
             </div>
-            <p class="text-gray-400">&copy; 2024 Geometry Dash Spam. All rights reserved.</p>
-            <p class="text-sm text-gray-500 mt-2">Geometry Dash is a trademark of RobTop Games AB. We are not affiliated with RobTop Games AB.</p>
-        </div>
+        </section>
+
+        <section id="training" class="py-20">
+            <div class="shell grid gap-10 lg:grid-cols-[.72fr_1.28fr]">
+                <div><p class="eyebrow">The fundamentals</p><h2 class="display mt-3 text-3xl leading-tight md:text-5xl">Speed is useful.<br><span class="accent">Control wins.</span></h2><p class="mt-6 text-slate-400">A high click count does not automatically create a clean run. Good spam play combines an even cadence, short inputs, visual anticipation, and enough relaxation to repeat the pattern.</p></div>
+                <div class="prose panel p-7 md:p-10">
+                    <h3>What is Geometry Dash spam?</h3>
+                    <p>Geometry Dash spam describes a sequence of fast presses used to control a cube, ship, or wave through a demanding section. In wave mode, pressing sends the icon upward and releasing sends it downward. Fast alternation creates a tight zigzag, but the goal is not random clicking. Each press changes the icon's path, so rhythm and duration matter as much as raw speed.</p>
+                    <p>Fan-made spam games isolate this mechanic and let you practice it without replaying a full level. Some courses test a short burst, while others ask you to maintain control through a long corridor. Use them as focused drills rather than proof that you must always click at maximum speed.</p>
+                    <h3>Wave spam, ship spam, and straight fly</h3>
+                    <p><strong class="text-white">Wave spam</strong> uses quick press-and-release cycles to keep the wave near the center of a narrow passage. <strong class="text-white">Ship and straight-fly practice</strong> rely on smaller corrections: holding too long creates height, while releasing too long causes a drop. Both reward anticipation and gentle inputs. A CPS test is different again; it measures input rate, but does not measure whether those inputs would guide an icon safely.</p>
+                    <h3>How to improve your clicking rhythm</h3>
+                    <p>Begin at a pace you can sustain for several seconds without skipping beats. Keep your hand supported, loosen your grip, and press with only the force needed to register the input. Watch slightly ahead of the icon instead of staring directly at it. This gives you time to respond to changes in corridor height or direction.</p>
+                    <p>Use short sessions. Try three controlled runs, identify one repeatable mistake, then practice that specific transition. If the wave climbs too far, shorten the press rather than immediately clicking faster. If your cadence falls apart near the end, reduce the starting speed and build endurance gradually. Accuracy at a moderate rate is a better foundation than one fast, uncontrolled attempt.</p>
+                    <h3>A safe practice routine</h3>
+                    <p>Warm up with relaxed single clicks, play an easier course, and only then attempt a harder challenge. Take regular breaks and stop when you notice pain, numbness, or persistent tension. Different mice, keyboards, touchscreens, and device latency can change how a drill feels, so compare progress on the same setup instead of treating CPS as a universal score.</p>
+                    <p>Ready for a focused route? The <a href="/games/geometry-dash-spam-challenge.html" class="text-cyan-300 underline">Geometry Dash Spam Challenge guide</a> includes controls, common mistakes, a progressive routine, and the playable challenge. For a speed baseline, use the <a href="/geometry-dash-spam-test.html" class="text-cyan-300 underline">Geometry Dash Spam Test</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="leaderboard" class="border-y border-slate-800 bg-[#0a1019] py-20">
+            <div class="shell">
+                <div class="mb-8 flex flex-wrap items-end justify-between gap-4"><div><p class="eyebrow">Community scores</p><h2 class="display mt-3 text-3xl md:text-5xl">Global leaderboard</h2></div><a href="https://spamchallenge.pages.dev/#/leaderboard" target="_blank" rel="noopener noreferrer" class="text-cyan-300 underline">Open full leaderboard</a></div>
+                <div class="panel overflow-hidden"><iframe src="https://spamchallenge.pages.dev/#/leaderboard" title="Geometry Dash Spam global leaderboard" loading="lazy" class="h-[560px] w-full border-0"></iframe></div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-20">
+            <div class="shell max-w-4xl"><p class="eyebrow">Quick answers</p><h2 class="display mt-3 text-3xl md:text-5xl">Geometry Dash spam FAQ</h2>
+                <div class="mt-8 divide-y divide-slate-700 border-y border-slate-700">
+                    <details class="py-5"><summary class="flex items-center justify-between gap-4 text-lg font-bold">Are these official Geometry Dash games?<span class="text-2xl text-cyan-300 transition">+</span></summary><p class="mt-3 max-w-3xl text-slate-400">No. These are community-made browser challenges inspired by Geometry Dash mechanics. Geometry Dash is a trademark of RobTop Games AB, and this site is not affiliated with RobTop Games.</p></details>
+                    <details class="py-5"><summary class="flex items-center justify-between gap-4 text-lg font-bold">Do I need very high CPS to complete a spam challenge?<span class="text-2xl text-cyan-300 transition">+</span></summary><p class="mt-3 max-w-3xl text-slate-400">Not always. The required rate depends on the course, but controlled timing and short presses are often more important than clicking as fast as possible.</p></details>
+                    <details class="py-5"><summary class="flex items-center justify-between gap-4 text-lg font-bold">Can I play on a phone or tablet?<span class="text-2xl text-cyan-300 transition">+</span></summary><p class="mt-3 max-w-3xl text-slate-400">Yes, the games use simple press or tap input. Screen size, browser behavior, and touch latency can make mobile play feel different from a mouse.</p></details>
+                    <details class="py-5"><summary class="flex items-center justify-between gap-4 text-lg font-bold">Which challenge should a beginner try first?<span class="text-2xl text-cyan-300 transition">+</span></summary><p class="mt-3 max-w-3xl text-slate-400">Start with the Spam Test to learn your comfortable rhythm, then try the main Spam Challenge. Move to the wave and master variants after you can repeat controlled runs.</p></details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-800 py-10">
+        <div class="shell flex flex-col justify-between gap-6 text-sm text-slate-500 md:flex-row"><div><span class="display text-slate-200">GD SPAM LAB</span><p class="mt-2">Independent fan-made practice games and guides.</p></div><nav class="flex flex-wrap gap-5" aria-label="Footer navigation"><a href="/blog.html" class="hover:text-white">Guides</a><a href="/about.html" class="hover:text-white">About</a><a href="/privacy-policy.html" class="hover:text-white">Privacy</a><a href="/terms-of-service.html" class="hover:text-white">Terms</a></nav></div>
     </footer>
-
-    <!-- Google Analytics -->
-    <div style="display: none;">
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5EPY7GNTJD"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-5EPY7GNTJD');
-        </script>
-    </div>
-
-    <!-- Scripts -->
-    <script type="module" src="js/app.js"></script>
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', String(!expanded));
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>

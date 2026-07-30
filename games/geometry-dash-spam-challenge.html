@@ -3,112 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO Meta Tags -->
-    <title>The Ultimate Geometry Dash Spam Challenge: A Test of Skill</title>
-    <meta name="description" content="Take on the Geometry Dash Spam Challenge! This guide explains how to master this intense clicking test, improve your CPS, and conquer one of the hardest fan-made challenges.">
-    <meta name="keywords" content="Geometry Dash Spam Challenge, Spam Challenge, Geometry Dash, Clicking Game, High CPS, Rhythm Platformer, Spam Test, Reflex Game, Fan-Made Level">
-
+    <title>Geometry Dash Spam Challenge: Play Online & Improve Control</title>
+    <meta name="description" content="Play the Geometry Dash Spam Challenge online and learn wave controls, clicking rhythm, practice drills, and common mistakes to avoid.">
+    <link rel="canonical" href="https://geometrydash-spam.com/games/geometry-dash-spam-challenge.html">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <meta property="og:title" content="Geometry Dash Spam Challenge: Play Online">
+    <meta property="og:description" content="Play the browser challenge and use a practical training plan to improve wave control and clicking consistency.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geometrydash-spam.com/games/geometry-dash-spam-challenge.html">
+    <meta property="og:image" content="https://geometrydash-spam.com/images/spam-strategy.jpg">
+    <meta property="og:image:alt" content="Geometry Dash spam strategy guide">
+    <meta property="og:site_name" content="Geometry Dash Spam">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Geometry Dash Spam Challenge">
+    <meta name="twitter:description" content="Play online and improve wave control with focused practice drills.">
+    <meta name="twitter:image" content="https://geometrydash-spam.com/images/spam-strategy.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "VideoGame",
+          "name": "Geometry Dash Spam Challenge",
+          "url": "https://geometrydash-spam.com/games/geometry-dash-spam-challenge.html",
+          "description": "A free fan-made browser challenge for practicing fast, controlled wave inputs.",
+          "genre": ["Skill game", "Rhythm game"],
+          "playMode": "SinglePlayer",
+          "isAccessibleForFree": true,
+          "applicationCategory": "Game"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {"@type":"Question","name":"What is a Geometry Dash spam challenge?","acceptedAnswer":{"@type":"Answer","text":"It is a fan-made skill challenge that isolates rapid press-and-release patterns, often using wave movement through narrow corridors."}},
+            {"@type":"Question","name":"How do you control wave spam?","acceptedAnswer":{"@type":"Answer","text":"Use short, even presses and releases while watching the path ahead. Reduce press length when the wave moves too far instead of immediately clicking faster."}},
+            {"@type":"Question","name":"Does higher CPS always make wave spam easier?","acceptedAnswer":{"@type":"Answer","text":"No. A course may require a minimum input rate, but timing, press duration, positioning, and consistency determine whether the wave stays inside the corridor."}},
+            {"@type":"Question","name":"Can I play the spam challenge on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes. The challenge supports simple tap input, although screen size and touch latency can make it feel different from mouse play."}},
+            {"@type":"Question","name":"Is this an official Geometry Dash game?","acceptedAnswer":{"@type":"Answer","text":"No. It is a community-made browser challenge inspired by Geometry Dash and is not affiliated with RobTop Games."}}
+          ]
+        }
+      ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #111827; color: #E5E7EB; }
-        iframe { width: 100%; height: 100%; border: none; }
-        .game-container { aspect-ratio: 16 / 9; }
-        .content-section h2 { font-size: 2.25rem; font-weight: 700; margin-bottom: 1.5rem; border-left: 4px solid #A855F7; padding-left: 1rem; }
-        .content-section h3 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #C084FC; }
-        .content-section p, .content-section ul { margin-bottom: 1rem; line-height: 1.75; }
-        .content-section ul { list-style-position: inside; }
-        .content-section li { margin-bottom: 0.5rem; }
-        .content-section a { color: #A855F7; text-decoration: underline; }
-        .content-section a:hover { color: #D8B4FE; }
+        :root{--ink:#070b12;--panel:#101824;--line:#26374b;--cyan:#43e6ff;--lime:#c8ff4d}
+        html{scroll-behavior:smooth} body{margin:0;background:var(--ink);color:#f3f7fb;font-family:'Chakra Petch',sans-serif}
+        body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:linear-gradient(rgba(67,230,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(67,230,255,.12) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(#000,transparent 75%)}
+        .display{font-family:'Russo One',sans-serif}.shell{width:min(1120px,calc(100% - 2rem));margin-inline:auto}.panel{background:linear-gradient(145deg,#111c2a,#0a111b);border:1px solid var(--line)}
+        .eyebrow{color:var(--lime);font-size:.78rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase}.accent{color:var(--cyan)}
+        .article p{color:#bac4d1;line-height:1.82;margin-top:1rem}.article h2{font-family:'Russo One',sans-serif;font-size:clamp(1.65rem,3vw,2.3rem);margin-top:3.6rem;padding-top:1.2rem;border-top:1px solid var(--line)}.article h3{font-family:'Russo One',sans-serif;font-size:1.2rem;margin-top:2rem}.article ul{color:#bac4d1;line-height:1.75;margin-top:1rem;padding-left:1.2rem;list-style:square}.article li+li{margin-top:.55rem}
+        .game-frame{aspect-ratio:16/9}.related{transition:transform .2s,border-color .2s}.related:hover{transform:translateY(-4px);border-color:var(--cyan)}
+        summary{cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}details[open] summary span:last-child{transform:rotate(45deg)}
+        @media(max-width:640px){.game-frame{aspect-ratio:4/3}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.related{transition:none}}
     </style>
 </head>
-<body class="text-white">
-    <nav class="bg-gray-800 shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold">Geometry Dash Spam Challenge</h1>
-            <a href="/index.html" class="bg-cyan-500 hover:bg-cyan-600 px-4 py-2 rounded-full text-sm font-semibold transition">
-                <i class="fas fa-arrow-left mr-2"></i>Back to All Games
-            </a>
-        </div>
-    </nav>
-    <main class="container mx-auto p-4 md:p-8">
-        
-        <!-- Game Section -->
-        <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">The Geometry Dash Spam Challenge</h1>
-            <p class="text-center text-lg text-gray-400 mb-8">Your ultimate test of clicking speed, rhythm, and pure focus begins now.</p>
-            <div id="game-container" class="game-container bg-black rounded-lg overflow-hidden shadow-2xl shadow-purple-500/20">
-                <iframe src="https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-Spam-Challenge.html" allowfullscreen></iframe>
+<body>
+    <header class="sticky top-0 z-50 border-b border-slate-800 bg-[#070b12]/95 backdrop-blur">
+        <div class="shell flex h-16 items-center justify-between"><a href="/" class="display text-lg"><span class="accent">GD</span> SPAM LAB</a><nav class="flex items-center gap-4 text-sm"><a href="#guide" class="hidden hover:text-cyan-300 sm:block">Training guide</a><a href="/" class="border border-slate-600 px-4 py-2 hover:border-cyan-300">All games</a></nav></div>
+    </header>
+    <main>
+        <section class="py-16 md:py-24">
+            <div class="shell">
+                <p class="eyebrow">Playable browser challenge / medium</p>
+                <h1 class="display mt-4 max-w-5xl text-4xl leading-tight sm:text-6xl md:text-7xl">Geometry Dash <span class="accent">Spam Challenge</span></h1>
+                <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300">Guide the wave through a tight course using quick, controlled inputs. Play immediately, then use the drills below to turn frantic clicking into a repeatable rhythm.</p>
+                <div class="mt-8 flex flex-wrap gap-3 text-sm"><span class="panel px-4 py-2">Input: click, tap, or space</span><span class="panel px-4 py-2">Focus: wave control</span><span class="panel px-4 py-2">Price: free</span></div>
             </div>
         </section>
 
-        <div class="content-section max-w-4xl mx-auto">
-            
-            <!-- Introduction Section -->
-            <section>
-                <h2>What is a Geometry Dash Spam Challenge?</h2>
-                <p>A <strong>Geometry Dash Spam Challenge</strong> is an intense, fan-made test of skill derived from the popular rhythm-platformer, Geometry Dash. It isolates and amplifies one of the game's most demanding mechanics: rapid, precise clicking. In a typical <strong>Geometry Dash Spam Challenge</strong>, players must navigate a character, often a wave or an arrow, through a series of incredibly tight spaces and relentless obstacles. Success hinges entirely on your ability to maintain a high-speed, rhythmic tapping sequence. Even a momentary lapse in concentration or a slight mistiming of a click results in an instant crash, forcing you to restart the level from the very beginning.</p>
-                <p>These challenges are not about exploration or collecting coins; they are a pure and unfiltered test of your reflexes and finger speed. The community has created countless variations of the <strong>Geometry Dash Spam Challenge</strong>, ranging from moderately difficult practice levels to extreme versions that require god-tier clicking speeds (high CPS) and precision. They serve as both a vital training tool for aspiring pro players and a benchmark for bragging rights within the competitive scene.</p>
-            </section>
+        <section class="shell">
+            <div class="panel overflow-hidden shadow-2xl shadow-cyan-950/20">
+                <div class="flex items-center justify-between border-b border-slate-700 px-4 py-3"><span class="eyebrow">Live challenge</span><span class="text-xs text-slate-500">Fan-made browser game</span></div>
+                <div class="game-frame bg-black"><iframe src="https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-Spam-Challenge.html" title="Play Geometry Dash Spam Challenge" allow="fullscreen" allowfullscreen class="h-full w-full border-0"></iframe></div>
+            </div>
+            <p class="mt-3 text-sm text-slate-500">If the embedded game does not load, <a href="https://pub-9cd8442eae39491496da90d370d65538.r2.dev/Geometry-Dash-Spam-Challenge.html" target="_blank" rel="noopener noreferrer" class="text-cyan-300 underline">open the challenge directly</a>.</p>
+        </section>
 
-            <!-- Core Mechanics Section -->
-            <section>
-                <h2>The Fundamental Mechanics of the Challenge</h2>
-                <p>To overcome any <strong>Geometry Dash Spam Challenge</strong>, you must first master its core principles. It's a game of simple inputs but profoundly complex execution.</p>
-                
-                <h3>The Essence of Rhythmic Spamming</h3>
-                <p>The term "spam" might suggest mindless, chaotic clicking, but that's a misconception. A successful run in a <strong>Geometry Dash Spam Challenge</strong> is more like a high-speed drum solo than random button mashing. It requires a steady, consistent rhythm that you must maintain under immense pressure. Each click must be perfectly timed to keep your icon on the correct path. The challenge lies in syncing your physical actions with the visual cues on screen, all while the level scrolls at a blistering pace.</p>
+        <div id="guide" class="shell grid gap-12 py-20 lg:grid-cols-[minmax(0,1fr)_260px]">
+            <article class="article min-w-0">
+                <p class="eyebrow">Training manual</p>
+                <h2>What is a Geometry Dash spam challenge?</h2>
+                <p>A Geometry Dash spam challenge is a fan-made drill built around rapid, repeated inputs. Instead of asking you to complete a long level with many game modes, it isolates one demanding skill: keeping an icon under control while pressing and releasing quickly. The wave is a common choice because every input has an immediate, visible effect. Pressing sends it diagonally upward; releasing sends it diagonally downward.</p>
+                <p>The word “spam” can sound like random button mashing, but successful runs are structured. A stable cadence creates a predictable zigzag. Uneven presses make one side of that zigzag larger than the other, causing the wave to drift into a wall. The challenge therefore tests speed, timing, press duration, anticipation, and the ability to stay relaxed under pressure.</p>
 
-                <h3>Navigating the Treacherous Courses</h3>
-                <p>Most spam challenges utilize the "wave" game mode. In this mode, holding the click moves your triangular icon upwards, and releasing it causes it to move downwards. This creates a sharp, zig-zagging pattern of movement. The difficulty in a <strong>Geometry Dash Spam Challenge</strong> comes from how narrow the corridors are, forcing you to use incredibly fast and short clicks to keep the wave's movement minimal and centered. It's a delicate dance of control and speed.</p>
-            </section>
+                <h2>How to play</h2>
+                <ol class="mt-5 grid gap-4 md:grid-cols-3">
+                    <li class="panel p-5"><span class="eyebrow">01 / Start</span><strong class="display mt-2 block">Enter the course</strong><p class="text-sm">Click or tap inside the game and learn how strongly one press changes the path.</p></li>
+                    <li class="panel p-5"><span class="eyebrow">02 / Center</span><strong class="display mt-2 block">Build a cadence</strong><p class="text-sm">Alternate short presses and releases instead of holding either direction too long.</p></li>
+                    <li class="panel p-5"><span class="eyebrow">03 / Read</span><strong class="display mt-2 block">Look ahead</strong><p class="text-sm">Watch the next opening so you adjust before the wave reaches it.</p></li>
+                </ol>
+                <p>A mouse, keyboard, or touchscreen can all work. Use the input that feels easiest to repeat without excess force. The precise response may vary with browser, device, refresh rate, and input latency, so learn the course on one setup before comparing results across devices.</p>
 
-            <!-- Purpose and Appeal Section -->
-            <section>
-                <h2>Why Do Players Seek Out This Challenge?</h2>
-                <p>What drives players to subject themselves to the punishing difficulty of a <strong>Geometry Dash Spam Challenge</strong>? The appeal is multifaceted, blending skill improvement with the thrill of competition.</p>
+                <h2>CPS versus wave control</h2>
+                <p>CPS means clicks per second. It is useful as a simple speed measurement, but it does not describe the quality of those clicks. Two players can produce the same CPS while tracing very different paths. One may use short, evenly spaced inputs; the other may alternate long and short presses that push the wave away from the center.</p>
+                <p>For a narrow corridor, the useful target is the slowest cadence that keeps your movement compact enough to pass. Clicking faster than necessary can introduce tension and make small corrections harder. If you repeatedly hit the ceiling or floor, first shorten the press on that side. Increase speed only when the required zigzag is still too large after your timing becomes even.</p>
 
-                <h3>The Ultimate Training Tool</h3>
-                <p>For serious Geometry Dash players, spam challenges are an essential part of their training regimen. Many of the hardest official levels (known as "Demons") contain short but brutal spam sections. By practicing in a dedicated <strong>Geometry Dash Spam Challenge</strong>, players can build the muscle memory and endurance needed to conquer those sections when they encounter them in a full level. It's like a weightlifter isolating a specific muscle group for maximum growth.</p>
+                <h2>A progressive practice routine</h2>
+                <h3>Beginner: establish repeatable input</h3>
+                <p>Spend a few runs learning how the wave responds. Ignore completion percentage and aim to reproduce the same first section three times. Keep your forearm supported and your grip light. If your hand stiffens as soon as the game starts, deliberately slow down until the motion feels controlled.</p>
+                <h3>Intermediate: isolate the failure point</h3>
+                <p>When you can enter the course consistently, identify the first transition you cannot repeat. Decide whether the failure is caused by entering too high, entering too low, or losing rhythm inside the gap. Change only one part of the approach on the next attempt. This makes practice more informative than restarting at maximum speed without a plan.</p>
+                <h3>Advanced: build endurance without forcing it</h3>
+                <p>Long spam sequences reveal small timing errors and hand tension. Use several short sets rather than one exhausting session. Between sets, release the mouse or key and relax your fingers. Your goal is to preserve the same movement shape near the end that you produced at the beginning.</p>
+                <div class="panel mt-8 p-6"><p class="eyebrow">Sample 12-minute session</p><ul><li>2 minutes of relaxed warm-up clicks.</li><li>3 minutes on an easier wave or click-speed drill.</li><li>Two 2-minute sets on this challenge with a one-minute break.</li><li>2 minutes reviewing one consistent mistake at a slower pace.</li></ul></div>
 
-                <h3>A Community Benchmark</h3>
-                <p>The <strong>Geometry Dash Spam Challenge</strong> also serves as a benchmark within the community. Completing a notoriously difficult challenge is a badge of honor, a clear demonstration of your skill and dedication. Players often share videos of their successful runs, competing for the fastest times or simply to prove they have what it takes. The endless remixes and harder versions created by the community ensure that there is always a new, higher mountain to climb.</p>
-            </section>
+                <h2>Finger and wrist positioning</h2>
+                <p>There is no single grip that suits every player, but avoid holding your hand above the device without support. Let your forearm or palm rest naturally, keep the wrist close to neutral, and use only enough force for the input to register. A tense shoulder or tightly curled finger makes rapid movement harder to sustain.</p>
+                <p>Some players alternate fingers or use different clicking techniques to increase speed. Those methods are optional, not prerequisites. First develop a comfortable single-input rhythm. Stop immediately if you feel pain, numbness, tingling, or lingering strain. A browser challenge is not worth an overuse injury.</p>
 
-            <!-- Strategies for Success Section -->
-            <section>
-                <h2>Strategies to Conquer the Geometry Dash Spam Challenge</h2>
-                <p>Beating a <strong>Geometry Dash Spam Challenge</strong> requires more than just fast fingers; it requires a smart approach. Here are some proven strategies to help you on your path to victory.</p>
+                <h2>Common mistakes and fixes</h2>
+                <div class="mt-5 overflow-x-auto"><table class="w-full min-w-[620px] border-collapse text-left"><thead><tr class="border-b border-slate-600 text-cyan-300"><th class="p-4">What happens</th><th class="p-4">Likely cause</th><th class="p-4">Adjustment</th></tr></thead><tbody class="text-slate-300"><tr class="border-b border-slate-800"><td class="p-4">The wave climbs into the ceiling</td><td class="p-4">Presses are too long</td><td class="p-4">Release earlier; do not only add speed</td></tr><tr class="border-b border-slate-800"><td class="p-4">The path grows uneven</td><td class="p-4">Cadence changes under pressure</td><td class="p-4">Practice a slower, audible rhythm</td></tr><tr class="border-b border-slate-800"><td class="p-4">You miss a transition</td><td class="p-4">Watching the icon, not the opening</td><td class="p-4">Shift your focus slightly ahead</td></tr><tr><td class="p-4">Speed drops late in the run</td><td class="p-4">Starting too fast or gripping tightly</td><td class="p-4">Reduce early pace and use shorter sets</td></tr></tbody></table></div>
 
-                <h3>1. Build a Solid Foundation</h3>
-                <p>Don't jump straight into the most extreme challenge. Start with easier spam maps to get a feel for the rhythm and control. Focus on consistency first. Can you maintain a steady stream of clicks without faltering? Once you build that foundational consistency, you can gradually start to increase your speed.</p>
+                <h2>Desktop and mobile differences</h2>
+                <p>Desktop players often prefer a mouse or keyboard because the physical switch provides feedback and the screen leaves more room to see upcoming obstacles. Mobile play uses the same basic press-and-release concept, but your finger can cover part of the course. Touch latency and browser gestures may also affect the feel.</p>
+                <p>On mobile, use landscape orientation when possible and tap in an area that does not hide the wave. On desktop, avoid pressing so hard that the device shifts. Scores or progress from two devices should not be treated as a perfect comparison because the input systems differ.</p>
 
-                <h3>2. Practice with a Purpose</h3>
-                <p>Mindless grinding will lead to frustration and burnout. Use practice modes to identify the specific patterns that are giving you trouble. Is it a sudden switch in rhythm? A particularly tight corridor? Isolate that section and repeat it until it becomes second nature. This targeted practice is far more effective than simply replaying the entire <strong>Geometry Dash Spam Challenge</strong> from the start every time.</p>
-
-                <h3>3. Stay Relaxed and Focused</h3>
-                <p>Tension is the enemy of speed and precision. When you feel yourself tensing up, your clicks will become erratic. Try to keep your hand, wrist, and arm as relaxed as possible. Focus your breathing and keep your eyes slightly ahead of your icon to anticipate the path. A calm and focused mind is the most powerful tool for any <strong>Geometry Dash Spam Challenge</strong>.</p>
-            </section>
-
-            <!-- FAQ Section -->
-            <section>
-                <h2>Frequently Asked Questions</h2>
-                
-                <h3>Is the Geometry Dash Spam Challenge an official game?</h3>
-                <p>No, it is a fan-made creation. The concept and the numerous levels are all created by the Geometry Dash community on platforms like Scratch and shared on dedicated websites to challenge other players.</p>
-
-                <h3>What does CPS mean in this context?</h3>
-                <p>CPS stands for "Clicks Per Second." It's a measure of how fast you are tapping your mouse or screen. High-level spam challenges often require a very high and sustained CPS to pass through the obstacles.</p>
-
-                <h3>Can I play the Geometry Dash Spam Challenge on mobile?</h3>
-                <p>Yes. Since the game only requires a single input (tapping), it is perfectly playable on mobile devices. However, many players find that using a mouse on a desktop provides more stability and allows for faster clicking techniques.</p>
-
-                <h3>What's the point if it's so difficult?</h3>
-                <p>The point of a difficult <strong>Geometry Dash Spam Challenge</strong> is the satisfaction of overcoming it. It's about pushing your own limits, improving a tangible skill, and participating in a community of like-minded players who enjoy testing their abilities.</p>
-            </section>
+                <h2>Frequently asked questions</h2>
+                <div class="mt-6 divide-y divide-slate-700 border-y border-slate-700">
+                    <details class="py-5"><summary class="flex justify-between gap-4 font-bold">What is a Geometry Dash spam challenge?<span class="text-2xl text-cyan-300 transition">+</span></summary><p>It is a fan-made skill challenge that isolates rapid press-and-release patterns, often using wave movement through narrow corridors.</p></details>
+                    <details class="py-5"><summary class="flex justify-between gap-4 font-bold">How do you control wave spam?<span class="text-2xl text-cyan-300 transition">+</span></summary><p>Use short, even presses and releases while watching the path ahead. If the wave moves too far, reduce press length before trying to click faster.</p></details>
+                    <details class="py-5"><summary class="flex justify-between gap-4 font-bold">Does higher CPS always make wave spam easier?<span class="text-2xl text-cyan-300 transition">+</span></summary><p>No. A course may require a minimum rate, but timing, press duration, positioning, and consistency determine whether the wave stays inside the corridor.</p></details>
+                    <details class="py-5"><summary class="flex justify-between gap-4 font-bold">Can I play the spam challenge on mobile?<span class="text-2xl text-cyan-300 transition">+</span></summary><p>Yes. The challenge supports simple tap input, although screen size and touch latency can make it feel different from mouse play.</p></details>
+                    <details class="py-5"><summary class="flex justify-between gap-4 font-bold">Is this an official Geometry Dash game?<span class="text-2xl text-cyan-300 transition">+</span></summary><p>No. It is a community-made browser challenge inspired by Geometry Dash and is not affiliated with RobTop Games.</p></details>
+                </div>
+            </article>
+            <aside class="hidden lg:block"><div class="panel sticky top-24 p-5"><p class="eyebrow">On this page</p><nav class="mt-4 space-y-3 text-sm text-slate-400"><a class="block hover:text-cyan-300" href="#guide">Training manual</a><a class="block hover:text-cyan-300" href="/geometry-dash-spam-test.html">Check your speed</a><a class="block hover:text-cyan-300" href="/blog/master-wave-control-advanced-techniques.html">Wave control guide</a><a class="block hover:text-cyan-300" href="/">All spam games</a></nav></div></aside>
         </div>
+
+        <section class="border-y border-slate-800 bg-[#0a1019] py-20">
+            <div class="shell"><p class="eyebrow">Continue training</p><h2 class="display mt-3 text-3xl md:text-5xl">Related games</h2><div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <a href="/geometry-dash-spam-test.html" class="related panel p-5"><span class="eyebrow">Baseline</span><h3 class="display mt-3 text-lg">Spam Test</h3><p class="mt-2 text-sm text-slate-400">Measure a comfortable click rhythm before another run.</p></a>
+                <a href="/games/geometry-dash-spam-wave.html" class="related panel p-5"><span class="eyebrow">Wave</span><h3 class="display mt-3 text-lg">Spam Wave</h3><p class="mt-2 text-sm text-slate-400">Practice a different corridor and visual pattern.</p></a>
+                <a href="/games/geometry-dash-spam-master.html" class="related panel p-5"><span class="eyebrow">Advanced</span><h3 class="display mt-3 text-lg">Spam Master</h3><p class="mt-2 text-sm text-slate-400">Move into a harder drill after building consistency.</p></a>
+                <a href="/games/geometry-dash-spam-chall.html" class="related panel p-5"><span class="eyebrow">Extreme</span><h3 class="display mt-3 text-lg">Challenge Chall</h3><p class="mt-2 text-sm text-slate-400">Test endurance in the tougher follow-up challenge.</p></a>
+            </div></div>
+        </section>
     </main>
+    <footer class="py-10"><div class="shell flex flex-col justify-between gap-5 text-sm text-slate-500 md:flex-row"><p>Independent fan-made challenge. Geometry Dash is a trademark of RobTop Games AB.</p><div class="flex gap-5"><a href="/privacy-policy.html" class="hover:text-white">Privacy</a><a href="/terms-of-service.html" class="hover:text-white">Terms</a><a href="/about.html" class="hover:text-white">About</a></div></div></footer>
 </body>
 </html>

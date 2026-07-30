@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/games/Geometry-Dash-Spam-Test.html",
+      "destination": "/geometry-dash-spam-test.html",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}

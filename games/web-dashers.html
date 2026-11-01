@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5EPY7GNTJD"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-5EPY7GNTJD');</script>
+    <title>Web Dashers - Play the Fan-Made Geometry Dash Browser Game</title>
+    <meta name="description" content="Learn about Web Dashers, a fan-made Geometry Dash browser project with classic levels, creation tools, and community features. Visit the original project to play.">
+    <link rel="canonical" href="https://geometrydash-spam.com/games/web-dashers.html">
+    <meta property="og:title" content="Web Dashers - Fan-Made Geometry Dash Browser Game">
+    <meta property="og:description" content="An independent guide to Web Dashers, its features, controls, and the original place to play.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://geometrydash-spam.com/games/web-dashers.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Web Dashers",
+      "url": "https://geometrydash-spam.com/games/web-dashers.html",
+      "description": "A fan-made Geometry Dash browser project covered by an independent introduction and play guide.",
+      "genre": ["Platformer", "Rhythm game"],
+      "gamePlatform": ["Web browser"]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+        :root { --ink:#070b12; --panel:#101824; --line:#25364b; --cyan:#43e6ff; --lime:#c8ff4d; --muted:#a8b4c4; }
+        html { scroll-behavior:smooth; }
+        body { margin:0; background:var(--ink); color:#f3f7fb; font-family:'Chakra Petch',sans-serif; }
+        body::before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.16; background-image:linear-gradient(rgba(67,230,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(67,230,255,.12) 1px,transparent 1px); background-size:42px 42px; mask-image:linear-gradient(to bottom,#000,transparent 80%); }
+        .display { font-family:'Russo One',sans-serif; letter-spacing:.02em; }
+        .shell { width:min(1180px,calc(100% - 2rem)); margin-inline:auto; }
+        .panel { background:linear-gradient(145deg,rgba(18,29,43,.96),rgba(9,15,24,.96)); border:1px solid var(--line); box-shadow:0 20px 70px rgba(0,0,0,.28); }
+        .eyebrow { color:var(--lime); font-size:.78rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+        .accent { color:var(--cyan); }
+        .prose p { color:#bac4d1; line-height:1.8; margin-top:1rem; }
+        .prose h2 { font-family:'Russo One',sans-serif; font-size:clamp(1.55rem,3vw,2.25rem); margin-top:2.6rem; }
+        .prose h3 { color:var(--cyan); font-family:'Russo One',sans-serif; font-size:1.25rem; margin-top:1.8rem; }
+        .prose a { color:var(--cyan); text-decoration:underline; text-underline-offset:3px; }
+        .dash-visual { background:radial-gradient(circle at 72% 24%,rgba(200,255,77,.3),transparent 20%),linear-gradient(135deg,#10243b,#07101b 55%,#17270d); position:relative; overflow:hidden; }
+        .dash-visual::after { content:""; position:absolute; inset:18% -10% auto; height:2px; background:var(--cyan); box-shadow:0 76px 0 rgba(67,230,255,.35),0 152px 0 rgba(67,230,255,.2); transform:rotate(-11deg); }
+        .dash-icon { width:72px; height:72px; background:var(--lime); border:7px solid #07101b; transform:rotate(45deg); box-shadow:0 0 0 3px var(--cyan),0 0 35px rgba(67,230,255,.55); }
+        @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    </style>
+</head>
+<body>
+    <header class="sticky top-0 z-50 border-b border-slate-800 bg-[#070b12]/95 backdrop-blur">
+        <div class="shell flex h-16 items-center justify-between">
+            <a href="/" class="display text-lg"><span class="accent">GD</span> SPAM LAB</a>
+            <a href="/" class="border border-slate-700 px-4 py-2 text-sm font-semibold hover:border-cyan-300 hover:text-cyan-300">Back to games</a>
+        </div>
+    </header>
+    <main>
+        <section class="relative overflow-hidden py-16 md:py-24">
+            <div class="shell grid items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
+                <div>
+                    <nav class="mb-8 text-sm text-slate-500" aria-label="Breadcrumb"><a href="/" class="hover:text-cyan-300">Home</a><span class="mx-2">/</span><span>Games</span><span class="mx-2">/</span><span class="text-slate-300">Web Dashers</span></nav>
+                    <p class="eyebrow mb-5">Independent game guide / fan project</p>
+                    <h1 class="display max-w-3xl text-5xl leading-[.98] sm:text-6xl md:text-7xl">WEB <span class="accent">DASHERS</span></h1>
+                    <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300">A browser-based Geometry Dash fan project with more than a single spam drill. This page explains what to expect and points you to the original project to play.</p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="https://web-dashers.github.io/" target="_blank" rel="noopener noreferrer" data-event="web-dashers-original" class="bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Open original project</a>
+                        <a href="#guide" class="border border-slate-600 px-6 py-3 font-bold hover:border-lime-300 hover:text-lime-300">Read the guide</a>
+                    </div>
+                    <p class="mt-5 max-w-xl text-sm text-slate-500">The original project is maintained elsewhere. We do not host or redistribute its game files here.</p>
+                </div>
+                <div class="panel dash-visual flex min-h-[300px] items-center justify-center p-8 md:min-h-[390px]" aria-label="Abstract Web Dashers artwork">
+                    <div class="relative z-10 text-center"><div class="dash-icon mx-auto"></div><p class="display mt-12 text-2xl">RUN / BUILD / SHARE</p><p class="mt-2 text-sm uppercase tracking-[.28em] text-slate-400">web browser demo</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-y border-slate-800 bg-[#0a1019] py-12">
+            <div class="shell grid gap-5 md:grid-cols-3">
+                <div class="panel p-6"><p class="eyebrow">01 / Play</p><h2 class="display mt-3 text-xl">Main levels</h2><p class="mt-3 text-slate-400">Expect platforming built around timing, quick reactions, and repeated attempts rather than a click-speed-only test.</p></div>
+                <div class="panel p-6"><p class="eyebrow">02 / Create</p><h2 class="display mt-3 text-xl">Level editor</h2><p class="mt-3 text-slate-400">The project description includes creation tools. Confirm the current editor behavior in the original build before relying on it.</p></div>
+                <div class="panel p-6"><p class="eyebrow">03 / Discover</p><h2 class="display mt-3 text-xl">Community search</h2><p class="mt-3 text-slate-400">Online level discovery is part of the project concept, but availability can change with the upstream service.</p></div>
+            </div>
+        </section>
+
+        <section id="guide" class="py-16 md:py-20">
+            <div class="shell grid gap-10 lg:grid-cols-[.7fr_1.3fr]">
+                <aside class="panel h-fit p-7 lg:sticky lg:top-24"><p class="eyebrow">Before you start</p><h2 class="display mt-3 text-2xl">Use the source first</h2><ul class="mt-6 space-y-4 text-sm leading-6 text-slate-400"><li><span class="mr-2 text-lime-300">01</span> Open the original project in a new tab.</li><li><span class="mr-2 text-lime-300">02</span> Click the game canvas before using keyboard controls.</li><li><span class="mr-2 text-lime-300">03</span> If the build is unavailable, return later rather than using a copied mirror.</li></ul><a href="https://web-dashers.github.io/" target="_blank" rel="noopener noreferrer" data-event="web-dashers-source" class="mt-7 inline-block text-cyan-300 underline">Visit the source project ↗</a></aside>
+                <article class="prose">
+                    <p class="eyebrow">What is Web Dashers?</p>
+                    <h2 class="mt-3">A broader fan-made browser experience</h2>
+                    <p>Web Dashers is described as a fan-made Geometry Dash web demo. Its scope is broader than the focused wave and spam challenges elsewhere on this site: the project presents main gameplay, a level editor, and a way to look for online levels.</p>
+                    <p>This page is an independent introduction, not an official Geometry Dash page and not a claim that the project is affiliated with RobTop Games. Features and controls can change when the upstream project changes.</p>
+                    <h2>How to start</h2>
+                    <p>Open the original project, wait for its assets to finish loading, and select the available play option. Give the game canvas keyboard focus before trying movement or jump inputs. If the page does not respond, reload the source page and check whether your browser is blocking scripts, audio, or keyboard input.</p>
+                    <h2>What to verify while playing</h2>
+                    <h3>Controls and focus</h3>
+                    <p>Use the control instructions shown by the current build instead of assuming that every Geometry Dash fan project uses the same key. On mobile, touch support may differ from desktop keyboard support.</p>
+                    <h3>Editor and online levels</h3>
+                    <p>Do not treat the editor or level search as guaranteed services. Test whether saving, publishing, and searching work in the current upstream build, and avoid entering personal information into an unfamiliar community service.</p>
+                    <h2>Common troubleshooting</h2>
+                    <p><strong class="text-white">Black screen:</strong> refresh the original page, disable conflicting extensions, and try a current browser. <strong class="text-white">No keyboard input:</strong> click the game area and check that another tab or overlay is not capturing focus. <strong class="text-white">No sound:</strong> interact with the page once and check the browser tab's mute state.</p>
+                    <p>If the source project itself is unavailable, this page will remain readable because the guide is hosted independently. We do not provide a replacement copy of the game.</p>
+                    <h2>Related practice games</h2>
+                    <p>For a focused timing drill, try the <a href="/games/geometry-dash-spam-challenge.html">Geometry Dash Spam Challenge</a>. To establish a click-speed baseline before a difficult section, use the <a href="/geometry-dash-spam-test.html">Spam Test</a>.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="border-t border-slate-800 py-10"><div class="shell flex flex-col justify-between gap-6 text-sm text-slate-500 md:flex-row"><div><span class="display text-slate-200">GD SPAM LAB</span><p class="mt-2">Independent fan-made practice games and guides.</p></div><nav class="flex flex-wrap gap-5" aria-label="Footer navigation"><a href="/blog.html" class="hover:text-white">Guides</a><a href="/about.html" class="hover:text-white">About</a><a href="/privacy-policy.html" class="hover:text-white">Privacy</a><a href="/terms-of-service.html" class="hover:text-white">Terms</a></nav></div></footer>
+    <script>
+        document.querySelectorAll('[data-event]').forEach((link) => link.addEventListener('click', () => {
+            if (typeof gtag === 'function') gtag('event', 'click', { event_category: 'web_dashers', event_label: link.dataset.event });
+        }));
+    </script>
+</body>
+</html>

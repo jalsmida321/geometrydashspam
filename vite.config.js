@@ -12,6 +12,7 @@ const input = {
   spamWave: './games/geometry-dash-spam-wave.html',
   waveSpam: './games/geometry-dash-wave-spam.html',
   akaSpam: './games/aka-geometry-dash-spam.html',
+  webDashers: './games/web-dashers.html',
   waveGuide: './blog/master-wave-control-advanced-techniques.html',
   updateGuide: './blog/geometry-dash-22-update-everything-you-need-to-know.html'
 }

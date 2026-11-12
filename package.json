@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "Geometry Dash Spam - HTML5 + Tailwind CSS Version",
   "type": "module",
+  "engines": {
+    "node": "26.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

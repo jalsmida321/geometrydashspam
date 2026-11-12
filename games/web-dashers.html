@@ -41,9 +41,8 @@
         .prose h2 { font-family:'Russo One',sans-serif; font-size:clamp(1.55rem,3vw,2.25rem); margin-top:2.6rem; }
         .prose h3 { color:var(--cyan); font-family:'Russo One',sans-serif; font-size:1.25rem; margin-top:1.8rem; }
         .prose a { color:var(--cyan); text-decoration:underline; text-underline-offset:3px; }
-        .dash-visual { background:radial-gradient(circle at 72% 24%,rgba(200,255,77,.3),transparent 20%),linear-gradient(135deg,#10243b,#07101b 55%,#17270d); position:relative; overflow:hidden; }
-        .dash-visual::after { content:""; position:absolute; inset:18% -10% auto; height:2px; background:var(--cyan); box-shadow:0 76px 0 rgba(67,230,255,.35),0 152px 0 rgba(67,230,255,.2); transform:rotate(-11deg); }
-        .dash-icon { width:72px; height:72px; background:var(--lime); border:7px solid #07101b; transform:rotate(45deg); box-shadow:0 0 0 3px var(--cyan),0 0 35px rgba(67,230,255,.55); }
+        .game-frame { aspect-ratio:16 / 9; min-height:360px; background:#020509; }
+        .game-frame iframe { display:block; width:100%; height:100%; min-height:360px; border:0; }
         @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
     </style>
 </head>
@@ -68,8 +67,14 @@
                     </div>
                     <p class="mt-5 max-w-xl text-sm text-slate-500">The original project is maintained elsewhere. We do not host or redistribute its game files here.</p>
                 </div>
-                <div class="panel dash-visual flex min-h-[300px] items-center justify-center p-8 md:min-h-[390px]" aria-label="Abstract Web Dashers artwork">
-                    <div class="relative z-10 text-center"><div class="dash-icon mx-auto"></div><p class="display mt-12 text-2xl">RUN / BUILD / SHARE</p><p class="mt-2 text-sm uppercase tracking-[.28em] text-slate-400">web browser demo</p></div>
+                <div class="panel overflow-hidden">
+                    <div class="game-frame">
+                        <iframe src="https://web-dashers.github.io/" title="Play Web Dashers" allow="autoplay; fullscreen" allowfullscreen loading="eager"></iframe>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-between gap-4 border-t border-slate-800 bg-[#0a1019] px-5 py-4 text-sm">
+                        <span class="text-slate-400">Game hosted by the Web Dashers project.</span>
+                        <a href="https://web-dashers.github.io/" target="_blank" rel="noopener noreferrer" data-event="web-dashers-original" class="text-cyan-300 underline">Open in a new window ↗</a>
+                    </div>
                 </div>
             </div>
         </section>
